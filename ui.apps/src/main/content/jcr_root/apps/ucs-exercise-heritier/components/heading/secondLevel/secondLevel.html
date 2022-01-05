@@ -1,0 +1,13 @@
+<sly data-sly-use.model="it.codeland.heritier.core.models.HeadingModel" />
+<sly data-sly-list.item="${model.childPages}">
+    <div class="second-level__items about-us" data-nav-2="${item.title}">
+        <div class="container">
+            <a class="second-level__item--title text--paragraph-title" href="#">
+                ${item.title}
+            </a>
+            <sly data-sly-list.child="${item.listChildren}">
+                <a class="second-level__item text--body" href="${child.path}.html">${child.title}</a>
+            </sly>
+        </div>
+    </div>
+</sly>

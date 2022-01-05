@@ -1,0 +1,46 @@
+    <div class="footer__wrap container">
+        <div class="footer__upper" data-sly-use.model="it.codeland.heritier.core.models.FooterModel">
+            <div class=" footer__mainLink">
+               <div>
+               <sly
+               data-sly-resource="${'unicredit-footer-upper' @ resourceType='ucs-exercise-heritier/components/footer-upper'}">
+           </sly>
+               </div>
+            </div>
+            <div class="footer__lastLink">
+               <div>
+               <sly
+               data-sly-resource="${'unicredit-footer-middle' @ resourceType='ucs-exercise-heritier/components/footer-middle'}">
+           </sly>
+               </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__col">
+
+                <sly data-sly-resource="${'unicredit-footer-img' @ resourceType='ucs-exercise-heritier/components/footer-logo'}"></sly>
+                
+                <div class="footer__copy"  data-sly-resource="${'unicredit-footer-copyright' @ resourceType='ucs-exercise-heritier/components/copyright'}">
+                   ©
+                   </div>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__socials">
+                    <a href="#">
+                        <span class="icon-twitter"></span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="#">
+                        <span class="icon-youtube"></span>
+                    </a>
+                </div>
+                <div class="footer__utils" data-sly-resource="${'unicredit-footer-utils' @ resourceType='ucs-exercise-heritier/components/footer-utils'}">
+                </div>
+            </div>
+        </div>
+    </div>

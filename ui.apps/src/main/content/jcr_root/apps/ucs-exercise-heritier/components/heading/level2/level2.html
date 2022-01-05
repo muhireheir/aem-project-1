@@ -1,0 +1,35 @@
+<sly data-sly-use.model="it.codeland.heritier.core.models.HeadingModel" />
+<div class="navbar__hamburger">
+    <div class="navbar__first-level">
+        <div class="navbar__back text--label">
+            <div class="icon icon-back"></div>
+            <span>BACK</span>
+        </div>
+        <div class="first-level__items">
+            <sly data-sly-list.item="${model.childPages}">
+                <div data-nav-1="${item.title}" class="first-level__item about-us" href="#">
+                    <span class="item__text text--label">${item.title}</span>
+                    <span class="icon icon-forth"></span>
+                </div>
+            </sly>
+        </div>
+
+        <div class="navbar__languages">
+            <div class="languages__selector">
+                <p class="selector__text text--label">ITA</p>
+                <span class="icon icon-down"></span>
+                <div class="selector__items">
+                    <a class="selector__item selector__item--active text--label" data-lang="ITA" data-lang-dk="ITALIANO"
+                        data-lang-m="IT" href="#">ITALIANO</a>
+                    <a class="selector__item text--label" data-lang="ENG" href="#" data-lang-dk="ENGLISH"
+                        data-lang-m="EN">ENGLISH</a>
+                    <a class="selector__item selector__item--disabled text--label" data-lang="DE"
+                        data-lang-dk="DEUTSCHE" data-lang-m="DE" href="#">DEUTSCHE</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__second-level">
+        <sly data-sly-resource="${'unicredit-heading-level2' @ resourceType='ucs-exercise-heritier/components/heading/secondLevel'}" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="navbar__links" data-sly-use.model="it.codeland.heritier.core.models.HeadingModel">
+<span data-sly-test="${!model.headingIcons}">Add navicons</span>
+<sly data-sly-test="${model.headingIcons}">
+<sly data-sly-list.item="${model.headingIcons}">
+<a target="${item.target}" class="navbar__link contact-us" href="${item.path}.html">
+    <div class="icon ${item.icon}"></div>
+    <p class="text--label">${item.label}</p>
+</a>
+</sly>
+</sly>
+</div>

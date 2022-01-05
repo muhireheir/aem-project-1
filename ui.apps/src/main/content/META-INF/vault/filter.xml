@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ucs-exercise-heritier/clientlibs"/>
+    <filter root="/apps/ucs-exercise-heritier/components"/>
+    <filter root="/apps/ucs-exercise-heritier/i18n"/>
+    <filter root="/apps/ucs-exercise-heritier/templates"/>
+</workspaceFilter>

@@ -1,0 +1,5 @@
+<sly class="footer__upper" data-sly-use.model="it.codeland.heritier.core.models.FooterModel">
+    <sly data-sly-list.item="${model.linksMapFooterMiddle}">
+        <a href="${item.path}.html" target="${item.target}.html" class="footer__link">${item.title}</a>
+    </sly>
+</sly>

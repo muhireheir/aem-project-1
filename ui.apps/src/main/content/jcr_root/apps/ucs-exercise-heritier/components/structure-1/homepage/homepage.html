@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-sly-test="${currentPage.parent}">
+        ${currentPage.title}
+    </title>
+    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+        <sly data-sly-call="${clientlib.css @ categories='ucs-exercise-heritier.base'}" />
+
+    </sly>
+    <sly data-sly-include="/libs/wcm/core/components/init/init.jsp" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.8/swiper-bundle.min.js"
+        integrity="sha512-TEY9MppoX49BydDCCSsdqDUihEAEdO2S2En3WRjPoM+4wBkLtE7HKJ/Xt34c46/XM0Qxf6+F5caDMejengSDdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <header class="header ucg-icons__newPackage"  data-sly-resource="${'unicredit-header' @ resourceType='ucs-exercise-heritier/components/heading/base'}"> 
+    </header>
+    <main class="main-content welcome-page ucg-icons__newPackage">
+        <!-- ******************* START HERO BANNER ******************* -->
+        <div class="heroBanner-welcome"
+            data-sly-resource="${'unicredit-carousel' @ resourceType='ucs-exercise-heritier/components/slider'}">
+        </div>
+    </main>
+
+    <footer class="footer ucg-icons__newPackage" data-sly-resource="${'unicredit-footer' @ resourceType='ucs-exercise-heritier/components/footer'}">
+    </footer>
+    <sly data-sly-call="${clientlib.js @ categories='ucs-exercise-heritier.base'}" />
+</body>
+</html>

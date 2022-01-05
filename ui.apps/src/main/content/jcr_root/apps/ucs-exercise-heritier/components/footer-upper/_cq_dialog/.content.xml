@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Properties" sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <well-multifield jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/well" fieldLabel="Nav Menus">
+                        <items jcr:primaryType="nt:unstructured">
+                            <linksMapFooterNav1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldDescription="Nav Dialog" fieldLabel="Nav Menus" required="{Boolean}false" name="linksMapFooterNav1">
+                                <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" emptyText="Nav Menu" name="./linksMapFooterNav1">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" emptyText="Link Title" name="./title" />
+                                        <path jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Path Link" rootPath="/content/ucs-exercise-heritier/" suffix=".html" name="./path" />
+                                        <target jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Target" emptyText="Target Type" name="./target">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <blank jcr:primaryType="nt:unstructured" text="blank" value="_blank" />
+                                                <self jcr:primaryType="nt:unstructured" text="self" value="_self" />
+                                            </items>
+                                        </target>
+                                    </items>
+                                </field>
+                            </linksMapFooterNav1>
+                        </items>
+                    </well-multifield>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

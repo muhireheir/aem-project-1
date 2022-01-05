@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'unicredit-bold-italic';
+    src: url('fonts/unicredit-bold.eot');
+    src: url('fonts/unicredit-bold.eot') format('embedded-opentype'), url('fonts/unicredit-bolditalic.otf') format('opentype'), url('fonts/unicredit-bolditalic.svg#unicreditbold_italic') format('svg'), url('fonts/unicredit-bolditalic.woff') format('woff'), url('fonts/unicredit-bolditalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-bold';
+    src: url('fonts/unicredit-bold.eot');
+    src: url('fonts/unicredit-bold.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-bold.otf') format('opentype'), url('fonts/unicredit-bold.svg#unicreditbold') format('svg'), url('fonts/unicredit-bold.woff') format('woff'), url('fonts/unicredit-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-heavy-italic';
+    src: url('fonts/unicredit-heavyitalic.eot');
+    src: url('fonts/unicredit-heavyitalic.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-heavyitalic.otf') format('opentype'), url('fonts/unicredit-heavyitalic.svg#unicreditheavy_italic') format('svg'), url('fonts/unicredit-heavyitalic.woff') format('woff'), url('fonts/unicredit-heavyitalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-heavy';
+    src: url('fonts/unicredit-heavy.eot');
+    src: url('fonts/unicredit-heavy.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-heavy.otf') format('embedded-opentype'), url('fonts/unicredit-heavy.svg#unicreditheavy') format('svg'), url('fonts/unicredit-heavy.woff') format('woff'), url('fonts/unicredit-heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-italic';
+    src: url('fonts/unicredit-italic.eot');
+    src: url('fonts/unicredit-italic.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-italic.otf') format('opentype'), url('fonts/unicredit-italic.svg#unicredititalic') format('svg'), url('fonts/unicredit-italic.woff') format('woff'), url('fonts/unicredit-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-light-italic';
+    src: url('fonts/unicredit-lightitalic.eot');
+    src: url('fonts/unicredit-lightitalic.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-lightitalic.otf') format('opentype'), url('fonts/unicredit-lightitalic.svg#unicreditlight_italic') format('svg'), url('fonts/unicredit-lightitalic.woff') format('woff'), url('fonts/unicredit-lightitalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-light';
+    src: url('fonts/unicredit-light.eot');
+    src: url('fonts/unicredit-light.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-light.otf') format('opentype'), url('fonts/unicredit-light.svg#unicreditlight') format('svg'), url('fonts/unicredit-light.woff') format('woff'), url('fonts/unicredit-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-medium-italic';
+    src: url('fonts/unicredit-mediumitalic.eot');
+    src: url('fonts/unicredit-mediumitalic.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-mediumitalic.otf') format('opentype'), url('fonts/unicredit-mediumitalic.svg#unicreditmedium_italic') format('svg'), url('fonts/unicredit-mediumitalic.woff') format('woff'), url('fonts/unicredit-mediumitalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-medium';
+    src: url('fonts/unicredit-medium.eot');
+    src: url('fonts/unicredit-medium.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-medium.otf') format('opentype'), url('fonts/unicredit-medium.svg#unicreditmedium') format('svg'), url('fonts/unicredit-medium.woff') format('woff'), url('fonts/unicredit-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'unicredit-regular';
+    src: url('fonts/unicredit-regular.eot');
+    src: url('fonts/unicredit-regular.eot?#iefix') format('embedded-opentype'), url('fonts/unicredit-regular.otf') format('opentype'), url('fonts/unicredit-regular.svg#unicreditregular') format('svg'), url('fonts/unicredit-regular.woff') format('woff'), url('fonts/unicredit-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}

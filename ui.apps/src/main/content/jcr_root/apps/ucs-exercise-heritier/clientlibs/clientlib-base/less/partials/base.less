@@ -1,0 +1,109 @@
+// out: false
+
+/****************************************************
+* Base
+****************************************************/
+
+html {
+  font-family: @unicredit-regular;
+  font-size: 16px;
+  color: @black;
+  word-wrap: break-word;
+  direction: ltr;
+  width: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: white;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  font-display: block;
+  position: relative;
+}
+
+a {
+  color: @black;
+  .transition(all 0.3s ease-in-out);
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
+  padding-right: 40px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  //For ie
+  align-self: center;
+
+  @media @tablet {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media @mobile {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container-fixed {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1920px;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+// blurred elements
+
+.blurred {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+@media @tablet {
+  .only-dk {
+    display: none;
+  }
+
+  .only-mb {
+    display: block;
+  }
+}
+
+@media @desktop {
+  .only-dk {
+    display: block;
+  }
+
+  .only-mb {
+    display: none;
+  }
+}

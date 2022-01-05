@@ -1,0 +1,933 @@
+/****************************************************
+* Variables
+****************************************************/
+/* Extra bg colors
+============================= */
+/* Typography
+============================= */
+/****************************************************
+* Mixins
+****************************************************/
+/****************************************************
+* Hero Banner
+****************************************************/
+.heroBanner {
+  box-sizing: border-box;
+}
+.heroBanner .heroBanner__container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__press[data-selected-mobile="true"],
+  .heroBanner .heroBanner__container .heroBanner__news[data-selected-mobile="true"],
+  .heroBanner .heroBanner__container .heroBanner__commitment[data-selected-mobile="true"] {
+    display: block !important;
+    border-right: none !important;
+  }
+  .heroBanner .heroBanner__container .heroBanner__save-date[data-selected-mobile="true"],
+  .heroBanner .heroBanner__container .heroBanner__key-fact[data-selected-mobile="true"] {
+    display: block !important;
+    border-right: none !important;
+    padding: 0 !important;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper {
+  max-height: 800px;
+  min-height: 800px;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper {
+    max-height: 546px;
+    min-height: 546px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info {
+  height: 100%;
+  min-height: 800px;
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info {
+    min-height: 546px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__title {
+  position: absolute;
+  top: 39px;
+  left: 40px;
+  max-width: 580px;
+  font-family: "unicredit-bold", Helvetica, Arial, sans-serif !important;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__title {
+    font-size: 35px;
+    top: 20px;
+    left: 15px;
+    max-width: calc(100% - 30px);
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__label {
+  position: absolute;
+  height: 20px;
+  bottom: 184px;
+  left: 40px;
+  background-color: #9e9f36;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__label {
+    top: 343px;
+    left: 15px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__desc {
+  position: absolute;
+  bottom: 121px;
+  left: 40px;
+  max-width: 397px;
+  line-height: 1.33;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__desc {
+    max-height: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__desc {
+    top: 387px;
+    left: 15px;
+    max-width: 345px;
+    height: 50px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__button {
+  position: absolute;
+  bottom: 41px;
+  left: 40px;
+  height: 50px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .heroBanner__info .heroBanner__button {
+    bottom: 18px;
+    left: 15px;
+    max-width: calc(100% - 30px);
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  width: 100%;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    top: 51px;
+    font-size: 35px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info .heroBanner__title {
+  max-width: 580px;
+  text-align: center;
+  font-family: "unicredit-bold", Helvetica, Arial, sans-serif !important;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info .heroBanner__title {
+    max-width: 345px;
+    font-size: 35px;
+    margin-bottom: 28px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info .heroBanner__desc {
+  max-width: 510px;
+  text-align: center;
+  margin: 28px 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info .heroBanner__desc {
+    display: none;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info .heroBanner__button {
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__info .heroBanner__button {
+    max-width: 345px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  color: #ffffff;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group {
+    bottom: 0;
+    height: 260px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 85%, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.47) 28%);
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group:before {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 8%, rgba(0, 0, 0, 0.25) 92%);
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col {
+  width: 412px;
+  padding: 17px 20px 31px 21px;
+  box-sizing: border-box;
+  height: 100%;
+  border-right: 1px solid #ffffff;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col {
+    display: none;
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col:last-child {
+  border-right: none;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__title {
+  height: 84px;
+  margin-bottom: 14px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow-y: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__title {
+    height: 64px;
+    margin-bottom: 29px;
+    font-size: 25px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__sub-title {
+  height: 20px;
+  padding: 1px 11px 0 10px;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__date {
+  height: 23px;
+  margin: 14px 0 2px 0;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__desc {
+  margin-bottom: 30px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__desc {
+    max-height: 45px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__desc {
+    display: none;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__link button {
+  padding: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__col__link {
+    margin: 29px 0 45px 0;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__press .heroBanner__col__sub-title {
+  background-color: #e2001a;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__news .heroBanner__col__sub-title {
+  background-color: #e2001a;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .heroBanner__group .heroBanner__group__wrapper .heroBanner__commitment .heroBanner__col__sub-title {
+  background-color: #9e9f36;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info {
+  position: absolute;
+  top: 134px;
+  left: 0;
+  width: 100%;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    top: 51px;
+    font-size: 35px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info .heroBanner__title {
+  max-width: 580px;
+  text-align: center;
+  font-family: "unicredit-bold", Helvetica, Arial, sans-serif !important;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info .heroBanner__title {
+    max-width: 345px;
+    font-size: 35px;
+    max-width: 260px;
+    margin-bottom: 32px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info .heroBanner__desc {
+  text-align: center;
+  margin: 30px 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info .heroBanner__desc {
+    display: none;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info .heroBanner__button {
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__info .heroBanner__button {
+    max-width: 345px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group {
+  height: 284px;
+  width: 100%;
+  position: absolute;
+  bottom: 84px;
+  left: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group {
+    bottom: 29px;
+    height: 212px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper {
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper {
+    margin: 0 15px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col {
+  height: 100%;
+  min-width: 580px !important;
+  max-width: 580px;
+  border-right: 1px solid #ffffff;
+  padding: 0 20px;
+  color: #ffffff;
+}
+@media all and (min-width: 1025px) and (max-width: 1200px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col {
+    min-width: unset !important;
+    width: 47%;
+  }
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col ul li {
+    max-width: 87% !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col {
+    display: none;
+    min-width: 100% !important;
+    max-width: 100%;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col:first-child {
+  padding-left: 0;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__title {
+  margin-bottom: 23px;
+  margin-left: 4px;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__item {
+  height: 185px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__item {
+    height: 170px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__item:before {
+    background-color: #262626;
+  }
+}
+@supports (backdrop-filter: none) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__item:before {
+    backdrop-filter: blur(10px);
+  }
+}
+@supports not (backdrop-filter: none) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__col__item:before {
+    background-image: radial-gradient(circle at 50% 0, rgba(38, 34, 34, 0.03), #191818 74%);
+    background-color: #262626;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__col__title {
+    font-size: 25px;
+    height: 42px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__tower {
+  position: absolute;
+  right: 17px;
+  width: 77px;
+  height: 176px;
+  bottom: 0px;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__tower {
+    width: 69px;
+    height: 156px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__col__item {
+  border: 2px solid #606060;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__top-event {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: calc(100% - 48px);
+  height: 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__top-event {
+    left: 20px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__top-event .event__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__top-event .event__title .event__calendar {
+  font-size: 32px;
+  color: #ffffff;
+  margin-right: 18px;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event {
+  position: absolute;
+  bottom: 22px;
+  left: 71px;
+  height: 90px;
+  width: 80%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event {
+    height: 71px;
+    bottom: 30px;
+    left: 20px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__date-number {
+  height: 100%;
+  font-size: 70px;
+  border-right: 1px solid #ffffff;
+  padding-right: 17px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__date-number {
+    font-size: 50px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info {
+  padding-left: 17px;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info__date {
+  font-size: 22px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info__date {
+    font-size: 14px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info__hour {
+  font-size: 22px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info__hour {
+    font-size: 14px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info__place {
+  font-size: 22px;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info__place {
+    font-size: 14px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .heroBanner__bottom-event .event__info .text--normal {
+  font-family: "unicredit-regular", Helvetica, Arial, sans-serif !important;
+  font-weight: normal !important;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .event__cta {
+  position: absolute;
+  right: 35px;
+  top: 30px;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .event__cta button {
+  z-index: 10;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__save-date .event__cta {
+    right: unset;
+    top: unset;
+    bottom: 10px;
+    left: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__title {
+    font-size: 25px;
+    height: 42px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item {
+  border: 2px solid #ffffff;
+  position: relative;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .canvas-con-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .canvas-con-inner .heroChart {
+    width: 80px !important;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con {
+  margin-left: 40px;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con {
+    margin-left: 15px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con {
+    margin-left: 10px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 4px;
+  max-width: 93%;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li {
+    max-width: 100%;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li span {
+  display: inline-block;
+  font-family: "unicredit-regular", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend {
+  width: 12px;
+  height: 12px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend {
+    margin-right: 7px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend-label-text {
+  width: 156px;
+  margin-right: 25px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend-label-text {
+    margin-right: 0;
+    width: 156px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend-label-text {
+    width: 110px;
+  }
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend-label-data {
+  font-family: "unicredit-bold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-align: right;
+  width: 22px;
+  margin-right: 5px;
+}
+.heroBanner .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .heroBanner__group__wrapper .heroBanner__key-fact .heroBanner__col__item .canvas-con .legend-con ul li .chart-legend-um {
+  font-family: "unicredit-regular", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+.heroBanner .heroBanner__slide {
+  height: 100%;
+  min-height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__slide {
+    min-height: 546px;
+  }
+}
+.heroBanner .heroBanner__slide .heroBanner__player {
+  display: none;
+}
+.heroBanner .heroBanner__slide--video .heroBanner__player {
+  height: 174px;
+  width: 174px;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__slide--video .heroBanner__player {
+    height: 100px;
+    width: 100px;
+  }
+}
+.heroBanner .heroBanner__slide--video .heroBanner__player .player__start {
+  font-size: 70px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__slide--video .heroBanner__player .player__start {
+    font-size: 40px;
+  }
+}
+.heroBanner .heroBanner__slide--video .heroBanner__player .player__start:before {
+  padding-left: 5px;
+}
+.heroBanner .gradient {
+  position: relative;
+}
+.heroBanner .gradient:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.heroBanner .gradient--type-one:before {
+  background-image: linear-gradient(to bottom, rgba(19, 22, 63, 0.76), rgba(18, 21, 62, 0));
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .gradient--type-one:before {
+    background-image: radial-gradient(circle at 48% 42%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75) 64%) !important;
+  }
+}
+.heroBanner .gradient--type-two:before {
+  background-image: radial-gradient(circle at 50% 85%, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.47) 28%) !important;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .gradient--type-two:before {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 8%, rgba(0, 0, 0, 0.25) 92%) !important;
+  }
+}
+.heroBanner .gradient--type-three:before {
+  opacity: 0.82;
+  background-image: radial-gradient(circle at 50% 0, rgba(38, 34, 34, 0.03), #191818 74%) !important;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .gradient--type-three:before {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 8%, rgba(0, 0, 0, 0.25) 92%) !important;
+  }
+}
+.heroBanner .heroBanner__arrows {
+  bottom: 50px;
+  right: 5%;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__arrows {
+    display: none;
+  }
+}
+.heroBanner .heroBanner__pagination {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .heroBanner .heroBanner__pagination {
+    display: block;
+  }
+}

@@ -1,0 +1,4 @@
+<sly data-sly-use.model="it.codeland.heritier.core.models.FooterModel"/>
+<sly data-sly-list.item="${model.footerUtils}">
+<a style="color:white" href="${item.path}.html" target="${item.target}">${item.title}</a>
+</sly>

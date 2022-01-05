@@ -1,0 +1,378 @@
+// out: false
+
+/****************************************************
+* Mixins
+****************************************************/
+ 
+// Flexbox mixin
+.flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+.flex(@values) {
+  -webkit-box-flex: @values;
+  -moz-box-flex: @values;
+  -webkit-flex: @values;
+  -ms-flex: @values;
+  flex: @values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+.flex-direction(@direction) {
+  -webkit-flex-direction: @direction;
+  -moz-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+.flex-wrap(@wrap) {
+  -webkit-flex-wrap: @wrap;
+  -moz-flex-wrap: @wrap;
+  -ms-flex-wrap: @wrap;
+  flex-wrap: @wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+.flex-flow(@flow) {
+  -webkit-flex-flow: @flow;
+  -moz-flex-flow: @flow;
+  -ms-flex-flow: @flow;
+  flex-flow: @flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+.order(@val) {
+  -webkit-box-ordinal-group: @val;
+  -moz-box-ordinal-group: @val;
+  -ms-flex-order: @val;
+  -webkit-order: @val;
+  order: @val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+.flex-grow(@grow) {
+  -webkit-flex-grow: @grow;
+  -moz-flex-grow: @grow;
+  -ms-flex-grow: @grow;
+  flex-grow: @grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+.flex-shrink(@shrink) {
+  -webkit-flex-shrink: @shrink;
+  -moz-flex-shrink: @shrink;
+  -ms-flex-shrink: @shrink;
+  flex-shrink: @shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+.flex-basis(@width) {
+  -webkit-flex-basis: @width;
+  -moz-flex-basis: @width;
+  -ms-flex-basis: @width;
+  flex-basis: @width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+.justify-content(@justify) {
+  -webkit-justify-content: @justify;
+  -moz-justify-content: @justify;
+  -ms-justify-content: @justify;
+  justify-content: @justify;
+  -ms-flex-pack: @justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+.align-content(@align) {
+  -webkit-align-content: @align;
+  -moz-align-content: @align;
+  -ms-align-content: @align;
+  align-content: @align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+.align-items(@align) {
+  -webkit-align-items: @align;
+  -moz-align-items: @align;
+  -ms-align-items: @align;
+  -ms-flex-align: @align;
+  align-items: @align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+.align-self(@align) {
+  -webkit-align-self: @align;
+  -moz-align-self: @align;
+  -ms-align-self: @align;
+  align-self: @align;
+}
+
+// Clearfix
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Border-radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Rotate
+.rotate(@rotate) {
+  -ms-transform: rotate(@rotate); /* IE 9 */
+  -webkit-transform: rotate(@rotate); /* Safari */
+  transform: rotate(@rotate); /* Standard syntax */
+}
+
+// Scale
+.scale (@factor) {
+  -webkit-transform: scale(@factor);
+  -moz-transform: scale(@factor);
+  -ms-transform: scale(@factor);
+  -o-transform: scale(@factor);
+  transform: scale(@factor);
+}
+
+// Centered Div
+.center-align-absolute(@width, @height) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: @height;
+  width: @width;
+  margin-left: -@width / 2;
+  margin-top: -@height / 2;
+}
+
+.center-align-relative(@valueX, @valueY) {
+  position: relative;
+  top: @valueY;
+  left:@valueX;
+  -webkit-transform: translateX(-@valueX) translateY(-@valueY);
+  -ms-transform: translateX(-@valueX) translateY(-@valueY);
+  transform: translateX(-@valueX) translateY(-@valueY);
+}
+
+
+.vertical-centering(@value) {
+  position: relative;
+  top: @value;
+  -webkit-transform: translateY(-@value);
+  -ms-transform: translateY(-@value);
+  transform: translateY(-@value);
+}
+
+.v-align-absolute(@value) {
+  top: @value;
+  -webkit-transform: translateY(-@value);
+  -ms-transform: translateY(-@value);
+  transform: translateY(-@value);
+}
+
+.horizontal-align(@value) {
+  position: relative;
+  left: @value;
+  -webkit-transform: translateX(-@value);
+  -ms-transform: translateX(-@value);
+  transform: translateX(-@value);
+}
+
+.h-align-absolute(@value) {
+  left: @value;
+  -webkit-transform: translateX(-@value);
+  -ms-transform: translateX(-@value);
+  transform: translateX(-@value);
+}
+
+// Calc Width
+.calc-width(@margin, @fallback) {
+  width: @fallback;
+  width: -o-calc(~"100% - " @margin);
+  width: -webkit-calc(~"100% - " @margin); /** Safari 6, Chrome 19-25 **/
+  width: -moz-calc(~"100% - " @margin); /** FF 4-15  **/
+  width: calc(~"100% - " @margin); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and future other browsers **/
+}
+
+// Full Background
+.fullBackground() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.fullBackground() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.fullBgConfig(@prop-1, @prop-2) {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: @prop-1 @prop-2;
+}
+// Transition
+.transition(@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+
+//Animation
+.animation(@anitmation) {
+  -webkit-animation: @anitmation;
+  -moz-animation: @anitmation;
+  -ms-animation: @anitmation;
+  -o-animation: @anitmation;
+  animation: @anitmation;
+}
+
+.keyframes(@name; @arguments) {
+  @-moz-keyframes @name {
+    @arguments();
+  }
+  @-webkit-keyframes @name {
+    @arguments();
+  }
+  @-o-keyframes @name {
+    @arguments();
+  }
+  @keyframes @name {
+    @arguments();
+  }
+}
+
+// Font Face
+.font-face(@font-family, @file-path, @font-name-for-svg, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{file-path}.eot");
+    src: url("@{file-path}.eot?#iefix") format("embedded-opentype"), url("@{file-path}.woff2") format("woff"), url("@{file-path}.woff") format("woff"), url("@{file-path}.ttf") format("truetype"),
+    url("@{file-path}.svg#@{font-name-for-svg}") format("svg");
+    font-weight: @font-weight;
+    font-style: @font-style;
+    font-display: block;
+  }
+}
+.font-face-icon(@font-family, @file-path,@file-code, @font-name-for-svg, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url("@{file-path}.eot?@{file-code}");
+    src: url("@{file-path}.eot?@{file-code}#iefix") format("embedded-opentype"), url("@{file-path}.woff?@{file-code}") format("woff"), url("@{file-path}.ttf?@{file-code}") format("truetype"),
+    url("@{file-path}.svg?@{file-code}#@{font-name-for-svg}") format("svg");
+    font-weight: @font-weight;
+    font-style: @font-style;
+    font-display: block;
+  }
+}
+// Trasform
+.transform(@string) {
+  -webkit-transform: @string;
+  -moz-transform: @string;
+  -ms-transform: @string;
+  -o-transform: @string;
+  transform:@string;
+}
+
+// Trasform Origin
+.transform-origin (@x:center, @y:center) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin: @x @y;
+  -ms-transform-origin: @x @y;
+  -o-transform-origin: @x @y;
+}
+
+.transform-style(){
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+// RGBA
+.rgba-color(@baseColor, @opacity){
+  color:rgba(red(@baseColor), green(@baseColor), blue(@baseColor), @opacity);
+}
+
+.rgba-bg(@baseColor, @opacity){
+  background-color:rgba(red(@baseColor), green(@baseColor), blue(@baseColor), @opacity);
+}
+
+.box-shadow(@x; @y; @b; @s; @color; @opacity) {
+  box-shadow: @x @y @b @s fade(@color, @opacity);
+  -moz-box-shadow: @x @y @b @s fade(@color, @opacity);
+  -webkit-box-shadow: @x @y @b @s fade(@color, @opacity);
+}
+
+.gradient-bg(@angle, @color, @colorStart, @colorEnd){
+  background: @color;
+  background: -moz-linear-gradient(@angle, @colorStart, @colorEnd);
+  background: -webkit-linear-gradient(@angle, @colorStart, @colorEnd);
+  background: linear-gradient(@angle, @colorStart, @colorEnd);
+}
+
+// GRADIENT TEXT
+.gradient-text-linear(@angle, @color, @colorStart, @colorEnd) {
+  color: @color;
+  background: transparent;
+  background: -moz-linear-gradient(@angle, @colorStart, @colorEnd);
+  background: -webkit-linear-gradient(@angle, @colorStart, @colorEnd);
+  background: linear-gradient(@angle, @colorStart, @colorEnd);
+ -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+// Media Query
+@desktop: ~"only screen and (min-width: 1025px)";
+@tablet: ~"only screen and (max-width: 1024px)";
+@mobile: ~"only screen and (max-width: 768px)";
+@small: ~"only screen and (max-width: 425px)";
+@extra-small: ~"only screen and (max-width: 320px)";

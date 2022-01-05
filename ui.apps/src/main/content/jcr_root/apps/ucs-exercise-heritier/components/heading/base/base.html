@@ -1,0 +1,50 @@
+<!-- ******************* START NEW HEADER COMPONENT ******************* -->
+
+    <nav class="navbar container-fixed">
+        <sly
+            data-sly-resource="${'unicredit-header-level1' @ resourceType='ucs-exercise-heritier/components/heading/level1'}" />
+        <sly
+            data-sly-resource="${'unicredit-header-level2' @ resourceType='ucs-exercise-heritier/components/heading/level2'}" />
+    </nav>
+    <div class="hamburger">
+        <div class="icon"></div>
+    </div>
+    <!-- ******************* START SEARCH OVERLAY  COMPONENT ******************* -->
+    <aside class="ucg-search">
+        <div class="ucg-search__wrap">
+            <span class="ucg-search--close icon icon-close"></span>
+            <div class="panel ucg_search">
+                <div class="container">
+                    <input class="findAsYouType" type="text" name="querySearch"
+                        data-resultspage="/content/unicreditgroup-eu/it/search.html" placeholder="Typing"
+                        data-threshold="3" data-lang="it" />
+                    <span class="icon icon-search"></span>
+                </div>
+                <div class="searchSuggestion">
+                    <div class="autocomplete-suggestions">
+                        <div class="autocomplete-suggestion text--body" data-index="0">
+                            Typing
+                        </div>
+                        <div class="autocomplete-suggestion text--body" data-index="0">
+                            Typing <strong>suggestion two</strong>
+                        </div>
+                        <div class="autocomplete-suggestion text--body" data-index="1">
+                            Typing <strong>suggestion three</strong>
+                        </div>
+                        <div class="autocomplete-suggestion text--body" data-index="2">
+                            Typing <strong>suggestion four</strong>
+                        </div>
+                        <div class="autocomplete-suggestion text--body" data-index="3">
+                            Typing <strong>suggestion five</strong>
+                        </div>
+                        <div class="autocomplete-suggestion text--body" data-index="4">
+                            Typing <strong>suggestion six</strong>
+                        </div>
+                    </div>
+
+                    <button class="button button--arrow">MORE DETAILS</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- ******************* END OF SEARCH OVERLAY COMPONENT ******************* -->

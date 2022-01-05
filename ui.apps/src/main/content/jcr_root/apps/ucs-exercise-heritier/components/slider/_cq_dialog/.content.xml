@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Slider component" sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+        <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/tabs" type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <general jcr:primaryType="nt:unstructured" jcr:title="Slider Tools" sling:resourceType="granite/ui/components/foundation/section">
+                <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false" />
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           
+                        </items>
+                    </column>
+                </items>
+            </general>
+            <tab1 jcr:primaryType="nt:unstructured" jcr:title="Slide 1" sling:resourceType="granite/ui/components/foundation/section">
+                <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <imageDesktop1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide1/imageDesktopName" fileReferenceParameter="./slide1/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/imageAlt"/>
+                            <imageMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide1/imageMobileName" fileReferenceParameter="./slide1/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/imageMobileAlt"/>
+                            <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide1/logo">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
+                                    <white jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                </items>
+                            </logo>
+                            <slideType granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide1/slideType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <welcomeSlide jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide"/>
+                                    <articleSlide jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide"/>
+                                    <getInvolvedSlide jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-1"/>
+                            </slideType>
+                            <welcomeSlide granite:class="slideType-showhide-target-1" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleWelcome jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide1/titleWelcome" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </titleWelcome>
+                                    <abstractWelcome jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide1/abstractWelcome" />
+                                </items>
+                                <listeners jcr:primaryType="nt:unstructured" />
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="welcome-slide"/>
+                            </welcomeSlide>
+                            <articleSlide granite:class="slideType-showhide-target-1" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide1/titleArticle"/>
+                                    <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide1/category">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                        </items>
+                                    </category>
+                                    <tagsSlide1 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide1/tags" rootPath="/content/cq:tags/ucs-exercise-heritier" />
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide1/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide1/abstractArticle"/>
+                                    <callToAction sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide1/callToAction" />
+                                    <callToActionLink sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide1/callToActionLink" rootPath="/content/ucs-emile" />
+                                    <callToActionTargetOpening jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide1/callToActionTargetOpening">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
+                                            <blank jcr:primaryType="nt:unstructured" text="Blank" value="_blank"/>
+                                        </items>
+                                    </callToActionTargetOpening>
+                                </items>
+                                <listeners2 jcr:primaryType="nt:unstructured" />
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="article-slide"/>
+                            </articleSlide>
+                            <getInvolvedSlide granite:class="slideType-showhide-target-1" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide1/titleGetInvolved"/>
+                                    <subTitleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Sub title" name="./slide1/subTitleGetInvolved"/>
+                                    <descriptionGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description" name="./slide1/descriptionGetInvolved" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </descriptionGetInvolved>
+                                    <overlayTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay title" name="./slide1/overlayTitle"/>
+                                    <overlaySubTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay Sub title" name="./slide1/overlaySubTitle"/>
+                                    <overlayDescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Overlay Text" name="./slide1/overlayDescription" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </overlayDescription>
+                                    <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide1/imageOverlayName" fileReferenceParameter="./slide1/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/overlayImageAlt"/>
+                                    <overlayImgMobile1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide1/imageMobileOverlayName" fileReferenceParameter="./slide1/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide1/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altMobileOverlay1 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide1/overlayImageMobileAlt"/>
+
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide"/>
+                            </getInvolvedSlide>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+            <tab2 jcr:primaryType="nt:unstructured" jcr:title="Slide 2" sling:resourceType="granite/ui/components/foundation/section" name="./tab/tab1/">
+                <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <imageDesktop2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide2/imageDesktopName" fileReferenceParameter="./slide2/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/imageAlt"/>
+                            <imageMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide2/imageMobileName" fileReferenceParameter="./slide2/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/imageMobileAlt"/>
+                            <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide2/logo">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
+                                    <white jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                </items>
+                            </logo>
+                            <slideType2 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide2/slideType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <welcomeSlide2 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-2"/>
+                                    <articleSlide2 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-2"/>
+                                    <getInvolvedSlide2 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-2"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-2"/>
+                            </slideType2>
+                            <welcomeSlide2 granite:class="slideType-showhide-target-2" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleWelcome jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide2/titleWelcome" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </titleWelcome>
+                                    <abstractWelcome jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide2/abstractWelcome" />
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="welcome-slide-2"/>
+                            </welcomeSlide2>
+                            <articleSlide2 granite:class="slideType-showhide-target-2" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide2/titleArticle"/>
+                                    <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide2/category">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                        </items>
+                                    </category>
+                                    <tagsSlide2 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide2/tags" rootPath="/content/cq:tags/ucs-exercise-heritier" />
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide2/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide2/abstractArticle"/>
+                                    <callToAction2 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide2/callToAction" />
+                                    <callToActionLink2 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide2/callToActionLink" rootPath="/content/ucs-emile" />
+                                    <callToActionTargetOpening2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide2/callToActionTargetOpening">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
+                                            <blank jcr:primaryType="nt:unstructured" text="Blank" value="_blank"/>
+                                        </items>
+                                    </callToActionTargetOpening2>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="article-slide-2"/>
+                            </articleSlide2>
+                            <getInvolvedSlide2 granite:class="slideType-showhide-target-2" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide2/titleGetInvolved"/>
+                                    <subTitleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Sub title" name="./slide2/subTitleGetInvolved"/>
+                                    <descriptionGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description" name="./slide2/descriptionGetInvolved" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </descriptionGetInvolved>
+                                    <overlayTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay title" name="./slide2/overlayTitle"/>
+                                    <overlaySubTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay Sub title" name="./slide2/overlaySubTitle"/>
+                                    <overlayDescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Overlay Text" name="./slide2/overlayDescription" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </overlayDescription>
+                                    <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide2/imageOverlayName" fileReferenceParameter="./slide2/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/overlayImageAlt"/>
+                                    <overlayImgMobile2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide2/imageMobileOverlayName" fileReferenceParameter="./slide2/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altMobileOverlay2 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide2/overlayImageMobileAlt"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-2"/>
+                            </getInvolvedSlide2>
+                        </items>
+                    </column>
+                </items>
+            </tab2>
+            <tab3 jcr:primaryType="nt:unstructured" jcr:title="Slide 3" sling:resourceType="granite/ui/components/foundation/section">
+                <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <imageDesktop3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide3/imageDesktopName" fileReferenceParameter="./slide3/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/imageAlt"/>
+                            <imageMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide3/imageMobileName" fileReferenceParameter="./slide3/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/imageMobileAlt"/>
+                            <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide3/logo">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
+                                    <white jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                </items>
+                            </logo>
+                            <slideType3 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide3/slideType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <welcomeSlide3 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-3"/>
+                                    <articleSlide3 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-3"/>
+                                    <getInvolvedSlide3 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-3"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-3"/>
+                            </slideType3>
+                            <welcomeSlide3 granite:class="slideType-showhide-target-3" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleWelcome jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide3/titleWelcome" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </titleWelcome>
+                                    <abstractWelcome jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide3/abstractWelcome" />
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="welcome-slide-3"/>
+                            </welcomeSlide3>
+                            <articleSlide3 granite:class="slideType-showhide-target-3" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide3/titleArticle"/>
+                                    <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide3/category">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                        </items>
+                                    </category>
+                                    <tagsSlide3 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide3/tags" rootPath="/content/cq:tags/ucs-exercise-heritier" />
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide3/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide3/abstractArticle"/>
+                                    <callToAction3 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide3/callToAction" />
+                                    <callToActionLink3 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide3/callToActionLink" rootPath="/content/ucs-emile" />
+                                    <callToActionTargetOpening3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide3/callToActionTargetOpening">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
+                                            <blank jcr:primaryType="nt:unstructured" text="Blank" value="_blank"/>
+                                        </items>
+                                    </callToActionTargetOpening3>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="article-slide-3"/>
+                            </articleSlide3>
+                            <getInvolvedSlide3 granite:class="slideType-showhide-target-3" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide3/titleGetInvolved"/>
+                                    <subTitleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Sub title" name="./slide3/subTitleGetInvolved"/>
+                                    <descriptionGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description" name="./slide3/descriptionGetInvolved" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </descriptionGetInvolved>
+                                    <overlayTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay title" name="./slide3/overlayTitle"/>
+                                    <overlaySubTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay Sub title" name="./slide3/overlaySubTitle"/>
+                                    <overlayDescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Overlay Text" name="./slide3/overlayDescription" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </overlayDescription>
+                                    <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide3/imageOverlayName" fileReferenceParameter="./slide3/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/overlayImageAlt"/>
+                                    <overlayImgMobile3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide3/imageMobileOverlayName" fileReferenceParameter="./slide3/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altMobileOverlay3 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide3/overlayImageMobileAlt"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-3"/>
+                            </getInvolvedSlide3>
+
+                        </items>
+                    </column>
+                </items>
+            </tab3>
+            <tab4 jcr:primaryType="nt:unstructured" jcr:title="Slide 4" sling:resourceType="granite/ui/components/foundation/section">
+                <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <imageDesktop4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide4/imageDesktopName" fileReferenceParameter="./slide4/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/imageAlt"/>
+                            <imageMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide4/imageMobileName" fileReferenceParameter="./slide4/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/imageMobileAlt"/>
+                            <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide4/logo">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
+                                    <white jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                </items>
+                            </logo>
+                            <slideType4 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide4/slideType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <welcomeSlide4 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-4"/>
+                                    <articleSlide4 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-4"/>
+                                    <getInvolvedSlide4 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-4"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-4"/>
+                            </slideType4>
+                            <welcomeSlide4 granite:class="slideType-showhide-target-4" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleWelcome jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide4/titleWelcome" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </titleWelcome>
+                                    <abstractWelcome jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide4/abstractWelcome" />
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="welcome-slide-4"/>
+                            </welcomeSlide4>
+                            <articleSlide4 granite:class="slideType-showhide-target-4" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide4/titleArticle"/>
+                                    <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide4/category">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                        </items>
+                                    </category>
+                                    <tagsSlide4 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide4/tags" rootPath="/content/cq:tags/ucs-exercise-heritier" />
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide4/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide4/abstractArticle"/>
+                                    <callToAction4 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide4/callToAction" />
+                                    <callToActionLink4 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide4/callToActionLink" rootPath="/content/ucs-emile" />
+                                    <callToActionTargetOpening4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide4/callToActionTargetOpening">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
+                                            <blank jcr:primaryType="nt:unstructured" text="Blank" value="_blank"/>
+                                        </items>
+                                    </callToActionTargetOpening4>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="article-slide-4"/>
+                            </articleSlide4>
+                            <getInvolvedSlide4 granite:class="slideType-showhide-target-4" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide4/titleGetInvolved"/>
+                                    <subTitleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Sub title" name="./slide4/subTitleGetInvolved"/>
+                                    <descriptionGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description" name="./slide4/descriptionGetInvolved" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </descriptionGetInvolved>
+                                    <overlayTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay title" name="./slide4/overlayTitle"/>
+                                    <overlaySubTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay Sub title" name="./slide4/overlaySubTitle"/>
+                                    <overlayDescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Overlay Text" name="./slide4/overlayDescription" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </overlayDescription>
+                                    <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide4/imageOverlayName" fileReferenceParameter="./slide4/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/overlayImageAlt"/>
+                                    <overlayImgMobile4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide4/imageMobileOverlayName" fileReferenceParameter="./slide4/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altMobileOverlay4 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide4/overlayImageMobileAlt"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-4"/>
+                            </getInvolvedSlide4>
+
+                        </items>
+                    </column>
+                </items>
+            </tab4>
+            <tab5 jcr:primaryType="nt:unstructured" jcr:title="Slide 5" sling:resourceType="granite/ui/components/foundation/section">
+                <layout jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <imageDesktop5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image desktop" fileNameParameter="./slide5/imageDesktopName" fileReferenceParameter="./slide5/imageDesktopPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageDesktop" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altDesktop5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/imageAlt"/>
+                            <imageMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image mobile" fileNameParameter="./slide5/imageMobileName" fileReferenceParameter="./slide5/imageMobilePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageMobile" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
+                            <altMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/imageMobileAlt"/>
+                            <logo jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Logo" name="./slide5/logo">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <black jcr:primaryType="nt:unstructured" text="Black" value="black"/>
+                                    <white jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                </items>
+                            </logo>
+                            <slideType5 granite:class="cq-dialog-dropdown-showhide" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Slide Type" name="./slide5/slideType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <welcomeSlide5 jcr:primaryType="nt:unstructured" text="Welcome slide" value="welcome-slide-5"/>
+                                    <articleSlide5 jcr:primaryType="nt:unstructured" text="Article slide" value="article-slide-5"/>
+                                    <getInvolvedSlide5 jcr:primaryType="nt:unstructured" text="Get involved slide" value="get-involved-slide-5"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" cq-dialog-dropdown-showhide-target=".slideType-showhide-target-5"/>
+                            </slideType5>
+                            <welcomeSlide5 granite:class="slideType-showhide-target-5" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleWelcome jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide5/titleWelcome" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </titleWelcome>
+                                    <abstractWelcome jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide5/abstractWelcome" />
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="welcome-slide-5"/>
+                            </welcomeSlide5>
+                            <articleSlide5 granite:class="slideType-showhide-target-5" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <titleArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide5/titleArticle"/>
+                                    <category jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Category" name="./slide5/category">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cat1 jcr:primaryType="nt:unstructured" text="Category 1" value="cat1"/>
+                                            <cat2 jcr:primaryType="nt:unstructured" text="Category 2" value="cat2"/>
+                                            <cat3 jcr:primaryType="nt:unstructured" text="Category 3" value="cat3"/>
+                                        </items>
+                                    </category>
+                                    <tagsSlide5 jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags" multiple="{Boolean}true" name="./slide5/tags" rootPath="/content/cq:tags/ucs-exercise-heritier" />
+                                    <date jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" type="date" name="./slide5/date" required="{Boolean}false" displayedFormat="dddd MMMM Do YYYY" value="2021-01-01"/>
+                                    <abstractArticle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Abstract" name="./slide5/abstractArticle"/>
+                                    <callToAction5 sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Call to action label" jcr:primaryType="nt:unstructured" name="./slide5/callToAction" />
+                                    <callToActionLink5 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Call to action link" jcr:primaryType="nt:unstructured" name="./slide5/callToActionLink" rootPath="/content/ucs-emile" />
+                                    <callToActionTargetOpening5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/select" fieldLabel="Call to action target opening" name="./slide5/callToActionTargetOpening">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <self jcr:primaryType="nt:unstructured" text="Self" value="_self"/>
+                                            <blank jcr:primaryType="nt:unstructured" text="Blank" value="_blank"/>
+                                        </items>
+                                    </callToActionTargetOpening5>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="article-slide-5"/>
+                            </articleSlide5>
+                            <getInvolvedSlide5 granite:class="slideType-showhide-target-5" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./slide5/titleGetInvolved"/>
+                                    <subTitleGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Sub title" name="./slide5/subTitleGetInvolved"/>
+                                    <descriptionGetInvolved jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description" name="./slide5/descriptionGetInvolved" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </descriptionGetInvolved>
+                                    <overlayTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay title" name="./slide5/overlayTitle"/>
+                                    <overlaySubTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Overlay Sub title" name="./slide5/overlaySubTitle"/>
+                                    <overlayDescription jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Overlay Text" name="./slide5/overlayDescription" useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                            <format jcr:primaryType="nt:unstructured" features="*"/>
+                                            <justify jcr:primaryType="nt:unstructured" features="*"/>
+                                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                                            <paraformat jcr:primaryType="nt:unstructured" features="*"/>
+                                            <links jcr:primaryType="nt:unstructured" features="*"/>
+                                            <table jcr:primaryType="nt:unstructured" features="[\0]">
+                                                <hiddenHeaderConfig jcr:primaryType="nt:unstructured" hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden" hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
+                                            </table>
+                                        </rtePlugins>
+                                        <uiSettings jcr:primaryType="nt:unstructured">
+                                            <cui jcr:primaryType="nt:unstructured">
+                                                <inline jcr:primaryType="nt:unstructured" toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink]">
+                                                    <popovers jcr:primaryType="nt:unstructured">
+                                                        <justify jcr:primaryType="nt:unstructured" items="[justify#justifyleft,justify#justifycenter,justify#justifyright]" ref="justify"/>
+                                                        <lists jcr:primaryType="nt:unstructured" items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]" ref="lists"/>
+                                                        <paraformat jcr:primaryType="nt:unstructured" items="paraformat:getFormats:paraformat-pulldown" ref="paraformat"/>
+                                                    </popovers>
+                                                </inline>
+                                            </cui>
+                                        </uiSettings>
+                                    </overlayDescription>
+                                    <overlayImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Image" fileNameParameter="./slide5/imageOverlayName" fileReferenceParameter="./slide5/imageOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altOverlay jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/overlayImageAlt"/>
+                                    <overlayImgMobile5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Overlay Mobile Image" fileNameParameter="./slide5/imageMobileOverlayName" fileReferenceParameter="./slide5/imageMobileOverlayPath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/imageMobileOverlay" title="Image" uploadUrl="${suffix.path}" allowUpload="{Boolean}false" useHTML5="{Boolean}true"/>
+                                    <altMobileOverlay5 jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Alt" name="./slide5/overlayImageMobileAlt"/>
+                                </items>
+                                <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="get-involved-slide-5"/>
+                            </getInvolvedSlide5>
+
+                        </items>
+                    </column>
+                </items>
+            </tab5>
+        </items>
+    </content>
+</jcr:root>

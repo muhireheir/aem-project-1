@@ -1,0 +1,70 @@
+// out: false
+
+/****************************************************
+* Buttons
+****************************************************/
+
+.button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-family: @unicredit-bold;
+  cursor: pointer;
+  &--bg {
+    background-color: @turquoise-blue;
+    color: white;
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: 5px;
+
+    @media @tablet {
+      width: 100%;
+    }
+  }
+
+  &--arrow {
+    font-size: 14px;
+    color: @turquoise-blue;
+    background: transparent;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0;
+
+    &:after {
+      content: "\ea72";
+      font-family: @UC-Global-8;
+      color: @turquoise-blue;
+      transform: translatey(-50%) rotate(-90deg);
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      font-size: 12px;
+    }
+  }
+}
+
+.link {
+  &--simple {
+    color: @turquoise-blue !important;
+    text-decoration: underline;
+    font-size: 18px;
+    padding: 5px 0;
+  }
+}
+
+.hashTag {
+  padding: 0px 6px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: @unicredit-bold;
+  border: solid 1px @white;
+  background-color: @black;
+  color: @white;
+  line-height: 1.57;
+  text-align: center;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

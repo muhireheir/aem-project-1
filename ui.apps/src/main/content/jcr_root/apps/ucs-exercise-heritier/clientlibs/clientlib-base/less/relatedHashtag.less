@@ -1,0 +1,203 @@
+// out: false
+
+/****************************************************
+* RelatedHashtag
+****************************************************/
+
+.relatedHashtag {
+  width: 100%;
+  background-color: @white-two;
+  color: @black;
+  margin: 50px 0;
+  &__bar {
+    height: 100px;
+    width: 100%;
+    .flexbox();
+    .align-items(center);
+    @media @tablet {
+      .flex-direction(column);
+      height: auto;
+      padding-top: 16px;
+    }
+    @media @tablet {
+      .bar__title {
+        margin-bottom: 12px;
+      }
+    }
+
+    .bar__list {
+      .flexbox();
+      .align-items(center);
+      .justify-content(center);
+      margin-left: 15px;
+      @media @tablet {
+        .flex-wrap(wrap);
+        margin-left: 0;
+      }
+      .bar__item {
+        position: relative;
+        padding: 0 20px;
+        border-right: 1px solid @brown-grey;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        @media @tablet {
+          margin-bottom: 20px;
+          padding: 0 8px;
+        }
+        &:last-child {
+          border-right: none;
+          padding-right: 0;
+        }
+        &:first-child {
+          padding-left: 0;
+          &:before {
+            @media @tablet {
+              left: 0;
+              width: calc(100% - 8px);
+            }
+          }
+        }
+        &:not(.bar__item--active):hover {
+          color: @title-grey;
+        }
+        &--active {
+          color: @turquoise-blue;
+          font-family: "unicredit-bold";
+          &:before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            height: 3px;
+            width: calc(100% - 20px);
+            bottom: -4px;
+            background-color: @turquoise-blue;
+            @media @tablet {
+              width: calc(100% - 16px);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__result {
+    display: none;
+    border-top: 1px solid @brown-grey;
+
+    .result__cta {
+      width: 100%;
+      padding: 22px 0;
+      .flexbox();
+      .justify-content(space-between);
+      .align-items(center);
+      .result__number {
+        .results {
+          font-size: 20px;
+        }
+      }
+      .result__close {
+        .close {
+          cursor: pointer;
+          padding: 4px;
+          border-radius: 50%;
+          font-size: 12px;
+          background-color: @black;
+          color: @white;
+          margin-left: 14px;
+        }
+      }
+    }
+    .result__cards {
+      .swiper-container {
+        height: 380px;
+        width: 100%;
+        @media @tablet {
+          height: 410px !important;
+        }
+        .swiper-wrapper {
+          height: 315px !important;
+          width: 100%;
+          @media @tablet {
+            height: 365px !important;
+          }
+          .swiper-slide {
+            height: 100%;
+            width: 100%;
+            .cards {
+              height: 100%;
+              width: 100%;
+              .flexbox();
+              .align-items(center);
+              .justify-content(flex-start);
+              .card {
+                width: 269px;
+                height: 100%;
+                margin-right: 40px;
+                cursor: pointer;
+                @media @tablet {
+                  width: 100%;
+                  margin-right: 13px;
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+                &__bg {
+                  width: 100%;
+                  height: 163px;
+                  @media @tablet {
+                    height: 210px;
+                  }
+                  border-radius: 4px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                }
+                &__hashtag {
+                  display: inline-block;
+                  margin: 21px 20px 6px 20px;
+                  padding: 0px 6px;
+                  border-radius: 10px;
+                  font-size: 14px;
+                  font-family: "unicredit-bold", Helvetica, Arial, sans-serif;
+                  border: solid 1px @white;
+                  background-color: @black;
+                  color: @white;
+                  line-height: 1.57;
+                  text-align: center;
+                }
+                &__date {
+                  line-height: 1.71;
+                  margin-left: 20px;
+                  margin-right: 20px;
+                }
+                &__desc {
+                  margin-left: 20px;
+                  margin-right: 20px;
+                  line-height: 1.22;
+                  text-overflow: ellipsis;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  display: -webkit-box;
+                  overflow: hidden;
+
+                  // Workaround for ... into IE 11
+                  @media screen and (-ms-high-contrast: active),
+                    (-ms-high-contrast: none) {
+                    max-height: 65px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .swiper-pagination {
+          bottom: 0;
+          .swiper-pagination-bullet {
+            height: 6px;
+            width: 6px;
+          }
+        }
+      }
+    }
+  }
+}
