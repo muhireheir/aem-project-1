@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
     jcr:uuid="4d5b5803-9388-4b2f-9d42-9dfc22f940ff">
     <jcr:content
+        cq:name="slide_1_mobile.jpg"
+        cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-05T09:50:24.184+02:00"
+        jcr:lastModified="{Date}2022-01-06T08:04:51.235+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:Comments="Compressed by jpeg-recompress&#xa;"
-            dam:extracted="{Date}2022-01-05T09:50:23.946+02:00"
+            dam:extracted="{Date}2022-01-06T08:04:41.666+02:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -24,6 +27,9 @@
             dam:sha1="eb72f42e906a339f92da62a8260f188b7fe82560"
             dam:size="{Long}23979"
             dc:format="image/jpeg"
+            dc:modified="{Date}2022-01-06T08:04:51.235+02:00"
+            jcr:lastModified="{Date}2022-01-06T08:04:51.235+02:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}343"

@@ -1,260 +1,182 @@
-<!-- ******************* START HERO BANNER ******************* -->
-  <div class="heroBanner-welcome">
-    <div class="heroBanner__main container-fixed">
-      <div class="heroBanner__container swiper-container">
-        <div
-          class="heroBanner__wrapper swiper-wrapper"
-          data-sly-use.slider="it.codeland.heritier.core.models.SliderModel"
-        >
-          <p
-            data-sly-test="${wcmmode.edit && !slider.slides}"
-            style="
-              text-align: center;
-              margin: auto;
-            "
-          >
-            CLick to configure slideshow
-          </p>
-
-          <!-- Type 1 -->
-          <sly data-sly-repeat="${slider.slides}">
-            <sly
-              data-sly-test="${item.slideType == 'welcome-slide' || item.slideType == 'welcome-slide-2' || item.slideType == 'welcome-slide-3' || item.slideType == 'welcome-slide-4' || item.slideType == 'welcome-slide-5'}"
-            >
-              <div
-                data-sly-test="${item.imageDesktopPath || item.imageMobilePath}"
-                class="heroBanner__slide heroBanner__slide--type1 gradient gradient--type-one swiper-slide"
-                data-bg="${item.imageDesktopPath}"
-                data-bg-mobile="${item.imageMobilePath}"
-                data-video="https://www.youtube.com/embed/LNFcWWsoFws"
-              >
-                <sly data-sly-test="${item.logo == 'black'}">
-                  <div class="hero__mask text--subtitle" data-mask="light">
-                    <img
-                      class="mask__logo mask__logo--dark"
-                      src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg"
-                      alt="logo__mask"
-                    />
-                    <img
-                      class="mask__logo mask__logo--white"
-                      src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg"
-                      alt="logo__mask"
-                    />
-                  </div>
-                </sly>
-                <sly data-sly-test="${item.logo == 'white'}">
-                  <div class="hero__mask text--subtitle" data-mask="dark">
-                    <img
-                      class="mask__logo mask__logo--dark"
-                      src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg"
-                      alt="logo__mask"
-                    />
-                    <img
-                      class="mask__logo mask__logo--white"
-                      src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg"
-                      alt="logo__mask"
-                    />
-                  </div>
-                </sly>
-                <div class="hero container">
-                  <div class="hero__title text--headline">
-                    ${item.titleWelcome @context="html"}
-                  </div>
-                  <p class="hero__subtitle text--body">
-                    ${item.abstractWelcome}
-                  </p>
-                </div>
+<div class="heroBanner-welcome" data-sly-use.slides="it.codeland.heritier.core.models.Carousel">
+  <div class="heroBanner__main container-fixed">
+    <div class="heroBanner__container swiper-container">
+      <div class="heroBanner__wrapper swiper-wrapper">
+        <!-- TYPE 1 -->
+        <sly data-sly-list.item="${slides.childComponents}">
+          <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.title && item.type=='welcome'}"
+            class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+            data-bg="${item.desktopImagePath}" data-bg-mobile="${item.mobileImagePath}">
+            <!-- ##############  logo mask    -->
+            <sly data-sly-test="${item.logo=='black'}">
+              <div class="hero__mask text--subtitle" data-mask="light">
+                <img class="mask__logo"
+                  src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg" alt="logo__mask" />
               </div>
             </sly>
 
-            <!-- Type 2 -->
-            <sly
-              data-sly-test="${item.slideType == 'article-slide' || item.slideType == 'article-slide-2' || item.slideType == 'article-slide-3' || item.slideType == 'article-slide-4' || item.slideType == 'article-slide-5'}"
-            >
-              <div
-                class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
-                data-bg="${item.imageDesktopPath}"
-                data-bg-mobile="${item.imageMobilePath}"
-              >
-              <sly data-sly-test="${item.logo == 'black'}">
-                <div class="hero__mask text--subtitle" data-mask="light">
-                  <img
-                    class="mask__logo mask__logo--dark"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg"
-                    alt="logo__mask"
-                  />
-                  <img
-                    class="mask__logo mask__logo--white"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg"
-                    alt="logo__mask"
-                  />
-                </div>
-              </sly>
-              <sly data-sly-test="${item.logo == 'white'}">
-                <div class="hero__mask text--subtitle" data-mask="dark">
-                  <img
-                    class="mask__logo mask__logo--dark"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg"
-                    alt="logo__mask"
-                  />
-                  <img
-                    class="mask__logo mask__logo--white"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg"
-                    alt="logo__mask"
-                  />
-                </div>
-              </sly>
-
-                <div class="hero container">
-                  <div class="hero__info">
-                    <p class="hero__title text--headline">
-                      ${item.titleArticle}
-                    </p>
-                    <div class="hero__lables">
-                      <span class="hero__lable text--labelBg bg--lipstick"
-                        >${item.category}</span
-                      >
-                      <div class="hero__hashtags hashTags">
-                        <sly data-sly-repeat="${item.tags}">
-                          <div class="hero__hashtag hashTag">#${item}</div>
-                        </sly>
-                        <div class="more-hashtag">
-                          <span class="oval"></span>
-                          <span class="oval"></span>
-                          <span class="oval"></span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p class="hero__date text--subtitle">
-                      ${'EEEE d MMM y' @ format=item.date, timezone='UTC',
-                      locale='en_US', i18n}
-                    </p>
-                    <p class="hero__desc text--body">${item.abstractArticle}</p>
-                    <br />
-                    <a
-                      href="${item.callToActionLink}.html"
-                      target="${item.targetOpening}"
-                      class="hero__button button button--bg"
-                    >
-                      ${item.callToAction}
-                    </a>
-                  </div>
-                </div>
+            <sly data-sly-test="${item.logo=='white'}">
+              <div class="hero__mask text--subtitle" data-mask="dark">
+                <img class="mask__logo"
+                  src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg" alt="logo__mask" />
               </div>
             </sly>
 
-            <!-- Type 3 -->
-            <sly
-              data-sly-test="${item.slideType == 'get-involved-slide' || item.slideType == 'get-involved-slide-2' || item.slideType == 'get-involved-slide-3' || item.slideType == 'get-involved-slide-4' || item.slideType == 'get-involved-slide-5' }"
-            >
-              <div
-                class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
-                data-bg="${item.imageDesktopPath}"
-                data-bg-mobile="${item.imageMobilePath}"
-              >
-              <sly data-sly-test="${item.logo == 'black'}">
-                <div class="hero__mask text--subtitle" data-mask="light">
-                  <img
-                    class="mask__logo mask__logo--dark"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg"
-                    alt="logo__mask"
-                  />
-                  <img
-                    class="mask__logo mask__logo--white"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg"
-                    alt="logo__mask"
-                  />
-                </div>
-              </sly>
-              <sly data-sly-test="${item.logo == 'white'}">
-                <div class="hero__mask text--subtitle" data-mask="dark">
-                  <img
-                    class="mask__logo mask__logo--dark"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg"
-                    alt="logo__mask"
-                  />
-                  <img
-                    class="mask__logo mask__logo--white"
-                    src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg"
-                    alt="logo__mask"
-                  />
-                </div>
-              </sly>
-                <div class="hero container">
-                  <div class="hero__info">
-                    <p class="hero__title text--headline">
-                      ${item.titleGetInvolved}
-                    </p>
-                    <p class="hero__subtitle text--paragraph-title">
-                      ${item.subTitleGetInvolved}
-                    </p>
-                    <p class="hero__desc text--body">
-                      ${item.descriptionGetInvolved @context='html'}
-                      <br />
-                    </p>
-                    <button class="hero__button button button--bg" id="btn-${item.name}">
-                      Discover more
-                    </button>
-                  </div>
-                </div>
-              </div>
-             
-            </sly>
-          </sly>
-        </div>
 
-        <div
-          data-pagination
-          data-hero-pagination
-          class="heroBanner__pagination"
-        ></div>
-        <div data-arrows class="heroBanner__arrows">
-          <div data-prev-small class="icon-down"></div>
-          <div data-number>
-            <span class="current">1</span> / <span class="total">3</span>
+
+            <!-- ##############end of   logo mask -->
+
+
+            <div class="hero container">
+              <div class="hero__title text--headline">
+                ${item.title @context="html"}
+              </div>
+              <p class="hero__subtitle text--body">
+                ${item.subtitle}
+              </p>
+            </div>
           </div>
-          <div data-next-small class="icon-down"></div>
-        </div>
-      </div>
-      <sly
-        data-sly-use.sliderPopup="it.codeland.heritier.core.models.SliderModel"
-      >
-        <sly data-sly-repeat="${sliderPopup.slides}">
-          <sly
-            data-sly-test="${item.slideType == 'get-involved-slide' || item.slideType == 'get-involved-slide-2' || item.slideType == 'get-involved-slide-3' || item.slideType == 'get-involved-slide-4' || item.slideType == 'get-involved-slide-5' }"
-          >
-          <div class="heroBanner__modal" id="${item.name}">
-            <div class="modal">
-              <br />
-              <div class="modal__info">
-                <div class="modal__involved text--paragraph-title">
-                  <div class="icon icon-info"></div>
-                  ${item.overlayTitle}
-                </div>
-                <p class="modal__title text--headline">
-                  ${item.overlaySubTitle}
-                </p>
-                <div class="modal__text text--body">
-                  ${item.overlayDescription @context='html'}
+        <!-- TYPE 2 -->
+        <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.title && item.type=='article'}" class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+        data-bg="${item.desktopImagePath}" data-bg-mobile="${item.mobileImagePath}">
+        <!-- ##############  logo mask    -->
+        <sly data-sly-test="${item.logo=='black'}">
+          <div class="hero__mask text--subtitle" data-mask="light">
+            <img class="mask__logo"
+              src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg" alt="logo__mask" />
+          </div>
+        </sly>
+
+        <sly data-sly-test="${item.logo=='white'}">
+          <div class="hero__mask text--subtitle" data-mask="dark">
+            <img class="mask__logo"
+              src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg" alt="logo__mask" />
+          </div>
+        </sly>
+          <div class="hero container">
+            <div class="hero__info">
+              <p class="hero__title text--headline">
+                ${item.headerText_article}
+              </p>
+              <div class="hero__lables">
+                <span class="hero__lable text--labelBg bg--lipstick">${item.category}</span>
+                <div class="hero__hashtags hashTags">
+                  <sly data-sly-list.tag="${item.tags}">
+                    <div class="hero__hashtag hashTag">
+                      #${tag}
+                    </div>
+                  </sly>
+                  
+                  <div class="more-hashtag">
+                    <span class="oval"></span>
+                    <span class="oval"></span>
+                    <span class="oval"></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="modal__bg"
-                data-bg="${item.imageOverlayPath}"
-                data-bg-mobile="${item.imageMobileOverlayPath}"
-              ></div>
+
+              <p class="hero__date text--subtitle">
+                ${'EEEE d MMM y' @ format=item.date, timezone='UTC',
+                locale='en_US', i18n}
+              </p>
+              <p class="hero__desc text--body">
+               ${item.description_article}
+              </p>
+              <a target="${item.target}" class="hero__button button button--bg" href="${item.buttonLink}.html">
+                ${item.buttonText_article}
+              </a>
             </div>
-            <div class="modal__top-bar container">
-              <img
-                src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/logo_unicredit.svg"
-                alt="logo"
-              />
-              <div class="icon icon-close modal__close"></div>
-            </div>
-          </div> 
-          </sly>
+          </div>
+        </div>
+      
+
+
+        <!-- TYPE 3 -->
+        <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.title && item.type=='involve'}" class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+        data-bg="${item.desktopImagePath}" data-bg-mobile="${item.mobileImagePath}">
+        <!-- ##############  logo mask    -->
+        <sly data-sly-test="${item.logo=='black'}">
+          <div class="hero__mask text--subtitle" data-mask="light">
+            <img class="mask__logo"
+              src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_Black.svg" alt="logo__mask" />
+          </div>
         </sly>
+
+        <sly data-sly-test="${item.logo=='white'}">
+          <div class="hero__mask text--subtitle" data-mask="dark">
+            <img class="mask__logo"
+              src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/Logo_white.svg" alt="logo__mask" />
+          </div>
+        </sly>
+          <div class="hero container">
+            <div class="hero__info">
+              <p class="hero__title text--headline">${item.headerText_involve}</p>
+              <p class="hero__subtitle text--paragraph-title">
+                ${item.subheaderText_involve}
+              </p>
+              <p class="hero__desc text--body">
+                ${item.description_involve}
+              </p>
+              <a class="hero__button button button--bg" href="#">
+                ${item.buttonText_involve}
+              </a>
+            </div>
+          </div>
+        </div>
+
       </sly>
+
+
+
+      </div>
+      <div data-pagination data-hero-pagination class="heroBanner__pagination"></div>
+      <div data-arrows class="heroBanner__arrows">
+        <div data-prev-small class="icon-down"></div>
+        <div data-number>
+          <span class="current">1</span> / <span class="total">3</span>
+        </div>
+        <div data-next-small class="icon-down"></div>
+      </div>
     </div>
-  </div> 
+    <div class="heroBanner__modal">
+      <div class="modal">
+        <div class="modal__info">
+          <div class="modal__involved text--paragraph-title">
+            <div class="icon icon-info"></div>
+            Get involved
+          </div>
+          <p class="modal__title text--headline">Autumn photo campaign</p>
+          <div class="modal__text text--body">
+            <p>
+              Our new photography campaign celebrates autumn, the season
+              that marks the transition from summer to winter.
+            </p>
+            <p>
+              Please send us your photos that capture your experience of
+              Autumn. This could be images of the season’s warm colours or
+              the unique traditions and special activities that represent
+              the time of year in your city, country and culture.
+            </p>
+            <p>
+              Please remember: if you are sending us a photograph of a
+              person, please ask them to complete our UniCredit Release
+              Form. You can download a copy from this
+              <a href="#">link</a>.
+            </p>
+            <p>We look forward to receiving your photos!</p>
+            <p>
+              Please send your photo and caption to
+              <a href="mailto:onebank@unicreditgroup.eu">onebank@unicreditgroup.eu</a>
+            </p>
+          </div>
+        </div>
+        <div class="modal__bg" data-bg="./components/heroBanner__welcome/img/hero_modal_desk.jpg"
+          data-bg-mobile="./components/heroBanner__welcome/img/hero_modal_desk.jpg"></div>
+      </div>
+      <div class="modal__top-bar container">
+        <img src="./components/heroBanner__welcome/img/logo_unicredit.svg" alt="logo" />
+        <div class="icon icon-close modal__close"></div>
+      </div>
+    </div>
+  </div>
+</div>

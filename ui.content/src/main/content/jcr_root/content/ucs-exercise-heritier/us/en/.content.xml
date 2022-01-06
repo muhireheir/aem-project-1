@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:template="ucs-exercise-heritier/templates/homepage"
+        cq:lastModified="{Date}2022-01-06T13:02:45.466+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/ucs-exercise-heritier/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="en"
-        sling:resourceType="ucs-exercise-heritier/components/structure/homepage"
-        pageTitle="Unicredit site"/>
-    <home-page/>
+        sling:resourceType="ucs-exercise-heritier/components/structure/content-page"
+        pageTitle="Unicredit site">
+        <slideshow
+            jcr:lastModified="{Date}2022-01-06T08:41:20.079+02:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ucs-exercise-heritier/components/slider"/>
+        <slides
+            jcr:lastModified="{Date}2022-01-06T13:02:45.455+02:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ucs-exercise-heritier/components/slider"
+            textIsRich="[true,true]">
+            <slide1
+                jcr:lastModified="{Date}2022-01-06T13:02:45.455+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                category="Technology"
+                desktopImagePath="/content/dam/ucs-exercise-heritier/slide_1_desk.jpg"
+                logo="black"
+                mobileImagePath="/content/dam/ucs-exercise-heritier/slide_1_mobile.jpg"
+                subtitle="SUBTITLE"
+                tags="[workflow:,forum:,we-retail:,experience-fragments:,default:,core-components-examples:,properties:]"
+                title="&lt;p>WELCOME TO&lt;/p>&#xd;&#xa;&lt;p>OUR NEWS MAGAZINE&lt;/p>&#xd;&#xa;"
+                type="article"/>
+        </slides>
+    </jcr:content>
+    <about-us/>
 </jcr:root>
