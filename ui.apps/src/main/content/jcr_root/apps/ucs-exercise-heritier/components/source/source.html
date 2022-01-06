@@ -1,0 +1,9 @@
+<sly data-sly-use.model="it.codeland.heritier.core.models.DataSource">
+    <sly data-sly-list.item="${model.cars}">
+        <li>${item}</li>
+    </sly>
+    <div>
+        <p>listing</p>
+        ${model.items.toString}
+    </div>
+</sly>

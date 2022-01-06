@@ -40,8 +40,8 @@ $(document).ready(function () {
     $("header").hide();
   });
 
-  $(".heroBanner-welcome .heroBanner__slide--type3 #btn-slide5").click(function () {
-    $("#slide5").css("display", "flex").hide().fadeIn();
+  $(".heroBanner-welcome .heroBanner__slide--type3 .show-overlay").click(function () {
+    $(".heroBanner__modal").css("display", "flex").hide().fadeIn();
     var modalHeight = $(".heroBanner-welcome").css("height");
     $("main").css({ height: modalHeight, overflow: "hidden" });
     $("footer").hide();
