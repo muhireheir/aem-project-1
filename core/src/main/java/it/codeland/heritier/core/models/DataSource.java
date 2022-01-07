@@ -1,15 +1,14 @@
 package it.codeland.heritier.core.models;
 import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.Optional;
+
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 
 import javax.annotation.PostConstruct;
 
 import java.util.Iterator;
 import java.util.*;
-import java.util.regex.Pattern;
+
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 import org.apache.sling.api.resource.Resource;
@@ -45,6 +44,9 @@ public class DataSource {
 		String currentUri = parts.split("/jcr:content/slides")[0];
 		message = parts;
 		Page rootPage = pageManager.getPage(currentUri);
+
+		// check if page has slides child
+		if(rootPage.getContentResource("slides") != null){
 		Resource resource = rootPage.getContentResource("slides");
 		Iterator<Resource> children = resource.listChildren();
 
@@ -52,9 +54,13 @@ public class DataSource {
 			Resource currentChild = children.next();
 			allItems.add(currentChild);
 		}
-		String[] currentSlideOrder = resource.getValueMap().get("slideOrder", String[].class);
+		String[] currentSlideOrder;
+		if(resource.getValueMap().get("slideOrder") != null){
+			currentSlideOrder = resource.getValueMap().get("slideOrder", String[].class);
+		}else{
+			currentSlideOrder = new String[0];
+		}
 		childComponents = children;
-
 
 		// order all items
 
@@ -70,7 +76,7 @@ public class DataSource {
 				orderedSlides.add(activeSlide);
 			}
 		}
-
+	}
 
 
     }
