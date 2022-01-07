@@ -40,4 +40,14 @@ public class Carousel {
     public Iterator <Resource> getChildComponents(){
         return childComponents;
     }
+
+
+    // get parent component
+    
+    public Resource getParentComponent() {
+        return currentResource.getParent();
+    }
+
+    // get child components
+    
 }

@@ -1,38 +1,107 @@
 package it.codeland.heritier.core.models;
-
-import com.google.common.collect.Iterables;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import javax.annotation.PostConstruct;
-import org.apache.sling.api.resource.PersistenceException;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
+import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
+
+import javax.annotation.PostConstruct;
+
+import java.util.Iterator;
+import java.util.*;
+import java.util.regex.Pattern;
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageManager;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
-
-@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+@Model(adaptables = SlingHttpServletRequest.class)
 public class DataSource {
 
-   private String[] cars;
-   HashMap<String, String> items = new HashMap<String, String>();
+    @RequestAttribute
+    private String href;
+
+	private String message;
+
+	@SlingObject
+    private ResourceResolver resourceResolver;
+
+	private Iterator<Resource> childComponents;
+
+	private List<Resource> itemsOrder ;
+
+	private List<Resource> orderedSlides = new ArrayList<>();
+
+
+	private List<Resource> allItems = new ArrayList<>();
+
 
     @PostConstruct
-    protected void init() throws PersistenceException {
+    public void init() {
+		PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
+		String url = href;
+		String parts = url.split("_cq_dialog.html")[1];
+		String currentUri = parts.split("/jcr:content/slides")[0];
+		message = parts;
+		Page rootPage = pageManager.getPage(currentUri);
+		Resource resource = rootPage.getContentResource("slides");
+		Iterator<Resource> children = resource.listChildren();
 
-        cars = new String[]{"Audi", "BMW", "Mercedes", "Volvo"};
-        items.put("", "Audi");
-       
-     
+		while (children.hasNext()) {
+			Resource currentChild = children.next();
+			allItems.add(currentChild);
+		}
+		String[] currentSlideOrder = resource.getValueMap().get("slideOrder", String[].class);
+		childComponents = children;
+
+
+		// order all items
+
+		for (String slide : currentSlideOrder) {
+			Resource activeSlide = allItems.stream().filter(item -> {
+				if (item.getName().equals(slide)) {
+					return true;
+				}
+				return false;
+			}).findAny().orElse(null);
+
+			if (activeSlide != null) {
+				orderedSlides.add(activeSlide);
+			}
+		}
+
+
+
     }
-    // get cars
-    public String[] getCars(){
-        return cars;
+
+    public String getHref() {
+        return href;
     }
-    public HashMap<String,String> getItems(){
-        return items;
-    }
+
+	public Iterator<Resource> getChildComponents() {
+		return childComponents;
+	}
+
+	// get message
+	public String getMessage(){
+		return message;
+	}
+
+	// get itemsOrder
+	public List<Resource> getItemsOrder(){
+		return itemsOrder;
+	}
+
+
+	// get allItems
+	public List<Resource> getAllItems(){
+		return allItems;
+	}
+
+	// get orderedSlides
+	public List<Resource> getOrderedSlides(){
+		return orderedSlides;
+	}
 
 }

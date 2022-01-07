@@ -145,6 +145,11 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-annotations</artifactId>
+            <version>4.2.0</version>
+          </dependency>
+        <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
