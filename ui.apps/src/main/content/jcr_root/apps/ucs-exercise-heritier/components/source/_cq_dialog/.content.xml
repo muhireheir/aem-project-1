@@ -4,13 +4,8 @@
         <items jcr:primaryType="nt:unstructured">
             <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <dropdown jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Icon" name="./icon">
-                        <items jcr:primaryType="nt:unstructured">
-                            <message jcr:primaryType="nt:unstructured" text="Message icon" value="icon-contattaci2" />
-                            <calendar jcr:primaryType="nt:unstructured" text="Calendar icon" value="icon-calendar" />
-                            <globe jcr:primaryType="nt:unstructured" text="Globe icon" value="icon-estero2" />
-                            <search jcr:primaryType="nt:unstructured" text="Search icon" value="icon-search" />
-                        </items>
+                    <dropdown jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Icon0x" name="./icon">
+                        <datasource jcr:primaryType="nt:unstructured" sling:resourceType="/apps/ucs-exercise-heritier/components/source/list/list.html" />
                     </dropdown>
                 </items>
             </column>

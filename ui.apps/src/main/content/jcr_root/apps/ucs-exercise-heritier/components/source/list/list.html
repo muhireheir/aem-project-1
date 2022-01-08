@@ -1,3 +1,30 @@
-<sly data-sly-use.model="it.codeland.heritier.core.models.DataSource">
-
+<div data-sly-use.infos='${"it.codeland.heritier.core.models.DataSource" @href=request.requestURI}'>
+<sly data-sly-test="${infos.allItems.size >0}">
+  <table is="coral-table" orderable id="names">
+    <colgroup>
+      <col is="coral-table-column">
+      <col is="coral-table-column" fixedwidth>
+    </colgroup>
+    <thead is="coral-table-head">
+      <tr is="coral-table-row">
+        <th is="coral-table-headercell"></th>
+        <th is="coral-table-headercell"></th>
+      </tr>
+    </thead>
+    <tbody is="coral-table-body">
+      <sly data-sly-list.item="${infos.orderedSlides}">
+      <tr is="coral-table-row">
+        <td is="coral-table-cell">
+          ${item.name}    <span style="color: rgb(133, 31, 31);margin-left: 5px;">${item.type}</span>
+          <input type="hidden" name="./slideOrder" value="${item.name}" />
+        </td>
+        <td is="coral-table-cell">
+          <button is="coral-button" type="button" variant="minimal" icon="dragHandle" coral-table-roworder></button>
+        </td>
+      </tr>
+      </sly>
+    </tbody>
+  </table>
 </sly>
+
+</div>
