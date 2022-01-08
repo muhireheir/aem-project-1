@@ -18,7 +18,7 @@ public class Carousel {
     private Iterator<Resource> childComponents;
 
     private List<Resource> orderedSlides = new ArrayList<>();
-    // allItems 
+    
     private List<Resource> slides = new ArrayList<>();
 
 
