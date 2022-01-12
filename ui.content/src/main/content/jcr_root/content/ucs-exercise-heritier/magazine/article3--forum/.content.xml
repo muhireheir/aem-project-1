@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-01-12T07:30:44.252+02:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[forum:]"
+        cq:template="/apps/ucs-exercise-heritier/templates/article"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Article3 -forum"
+        sling:resourceType="ucs-exercise-heritier/components/structure/article"
+        date="{Date}2022-01-11T00:00:00.000+02:00"
+        description="this is yet another article"
+        picture="/content/dam/ucs-exercise-heritier/slide_1_mobile.jpg"/>
+</jcr:root>

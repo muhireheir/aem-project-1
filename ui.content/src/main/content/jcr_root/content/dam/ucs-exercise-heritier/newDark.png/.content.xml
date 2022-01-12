@@ -8,12 +8,12 @@
         cq:name="newDark.png"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-06T08:04:50.320+02:00"
+        jcr:lastModified="{Date}2022-01-10T06:51:13.635+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"
-            dam:extracted="{Date}2022-01-06T08:04:47.960+02:00"
+            dam:extracted="{Date}2022-01-10T06:51:12.891+02:00"
             dam:Fileformat="PNG"
             dam:MIMEtype="image/png"
             dam:Numberofimages="{Long}1"
@@ -27,7 +27,7 @@
             dam:size="{Long}2777"
             dc:format="image/png"
             dc:modified="{Date}2022-01-06T08:04:50.320+02:00"
-            jcr:lastModified="{Date}2022-01-06T08:04:50.314+02:00"
+            jcr:lastModified="{Date}2022-01-10T06:51:13.635+02:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

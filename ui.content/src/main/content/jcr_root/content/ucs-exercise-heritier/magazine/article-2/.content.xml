@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-01-10T22:05:46.340+02:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[workflow:]"
+        cq:template="/apps/ucs-exercise-heritier/templates/article"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Article 2"
+        sling:resourceType="ucs-exercise-heritier/components/structure/article"
+        date="{Date}2022-01-10T00:00:00.000+02:00"
+        description="this is a new second slides"
+        picture="/content/dam/ucs-exercise-heritier/slide_3_mobile.jpg"/>
+</jcr:root>

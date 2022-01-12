@@ -2,20 +2,21 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2022-01-06T16:10:53.573+02:00"
+        cq:lastModified="{Date}2022-01-11T15:24:16.337+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/ucs-exercise-heritier/templates/home"
         jcr:primaryType="cq:PageContent"
         jcr:title="About us"
         sling:resourceType="ucs-exercise-heritier/components/structure/content-page">
         <slides
-            jcr:lastModified="{Date}2022-01-06T16:10:53.550+02:00"
+            jcr:lastModified="{Date}2022-01-10T11:56:48.749+02:00"
             jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="ucs-exercise-heritier/components/slider"
-            textIsRich="[true,true,true,true,true]">
+            slideOrder="[slide1,slide2,slide3,slide4,slide5]"
+            textIsRich="[true,true,true,true,true,true,true,true,true,true]">
             <slide1
-                jcr:lastModified="{Date}2022-01-06T16:10:53.550+02:00"
+                jcr:lastModified="{Date}2022-01-10T11:56:48.749+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 buttonLink="/content/ucs-exercise-heritier/us/en/about-us"
@@ -37,14 +38,15 @@
                 headerText_involve="Get involved"
                 logo="white"
                 mobileImagePath="/content/dam/ucs-exercise-heritier/slide_1_mobile.jpg"
+                name="slide1"
                 subheaderText_involve="AUTUMN PHOTO CAMPAIGN"
                 subtitle="One UniCredit brings our people, customers and communities together in one place.&#xd;&#xa;&#xd;&#xa;"
                 tags="[experience-fragments:]"
                 target="_blank"
-                title="&lt;p>welcome to !&lt;/p>&#xd;&#xa;&lt;p>Our magazine one unicredit&lt;/p>&#xd;&#xa;"
+                title="&lt;p>welcome to&lt;/p>&#xd;&#xa;&lt;p>Our magazine one unicredit&lt;/p>&#xd;&#xa;"
                 type="welcome"/>
             <slide2
-                jcr:lastModified="{Date}2022-01-06T16:10:53.550+02:00"
+                jcr:lastModified="{Date}2022-01-10T11:56:48.749+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 buttonLink="/content/ucs-exercise-heritier/us/en/about-us"
@@ -56,13 +58,14 @@
                 headerText_article="Reminder to stay safe!"
                 logo="black"
                 mobileImagePath="/content/dam/ucs-exercise-heritier/slide_2_mobile.jpg"
+                name="slide2"
                 subtitle="With Covid-19 cases rising across our geographies, UniCredit reminds you about the flexible working solutions"
                 tags="[workflow:,forum:,we-retail:,experience-fragments:]"
                 target="_blank"
                 title="&lt;p>Reminder to stay safe!&lt;/p>&#xd;&#xa;"
                 type="article"/>
             <slide3
-                jcr:lastModified="{Date}2022-01-06T16:10:53.550+02:00"
+                jcr:lastModified="{Date}2022-01-10T11:56:48.749+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 buttonText_involve="Discover more"
@@ -72,27 +75,54 @@
                 headerText_involve="Get involved"
                 logo="black"
                 mobileImagePath="/content/dam/ucs-exercise-heritier/slide_3_mobile.jpg"
+                name="slide3"
                 subheaderText_involve="AUTUMN PHOTO CAMPAIGN"
                 subtitle="AUTUMN PHOTO CAMPAIGN"
                 target="_blank"
                 title="&lt;p>Get involved&lt;/p>&#xd;&#xa;"
                 type="involve"/>
             <slide4
-                jcr:lastModified="{Date}2022-01-06T16:10:53.550+02:00"
+                jcr:lastModified="{Date}2022-01-10T11:56:48.749+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                category="People"
-                logo="black"
+                buttonLink="/content/ucs-exercise-heritier/us/en/careers"
+                buttonText_article="Get more info"
+                category="Technology"
+                date="{Date}2022-01-11T00:00:00.000+02:00"
+                description_article="this is also a description"
+                desktopImagePath="/content/dam/ucs-exercise-heritier/slide_3_desk.jpg"
+                headerText_article="This is title for Demo!"
+                logo="white"
+                mobileImagePath="/content/dam/ucs-exercise-heritier/slide_2_mobile.jpg"
+                name="slide4"
+                subtitle="sub"
+                tags="[we-retail:,experience-fragments:,properties:,facebook:]"
                 target="_blank"
+                title="&lt;p>title&lt;/p>&#xd;&#xa;"
                 type="welcome"/>
             <slide5
-                jcr:lastModified="{Date}2022-01-06T16:10:53.550+02:00"
+                jcr:lastModified="{Date}2022-01-10T11:56:48.749+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 category="People"
                 logo="black"
+                name="slide5"
                 target="_blank"
+                title="&lt;p>this&lt;/p>&#xd;&#xa;"
                 type="welcome"/>
         </slides>
+        <related-tags
+            jcr:lastModified="{Date}2022-01-11T15:24:16.326+02:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ucs-exercise-heritier/components/tags"
+            closeLabel="hide"
+            maxArticle="10"
+            maxresult="14"
+            tags="[workflow:,forum:,we-retail:,experience-fragments:variation/web]"
+            title="Related Hashtag"
+            totalLabel="Results"/>
     </jcr:content>
+    <clients/>
+    <our-people/>
 </jcr:root>

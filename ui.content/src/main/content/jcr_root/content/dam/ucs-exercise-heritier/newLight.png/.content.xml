@@ -8,12 +8,12 @@
         cq:name="newLight.png"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-06T08:04:47.683+02:00"
+        jcr:lastModified="{Date}2022-01-10T06:51:12.621+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"
-            dam:extracted="{Date}2022-01-06T08:04:47.173+02:00"
+            dam:extracted="{Date}2022-01-10T06:51:12.380+02:00"
             dam:Fileformat="PNG"
             dam:MIMEtype="image/png"
             dam:Numberofimages="{Long}1"
@@ -27,7 +27,7 @@
             dam:size="{Long}2426"
             dc:format="image/png"
             dc:modified="{Date}2022-01-06T08:04:44.926+02:00"
-            jcr:lastModified="{Date}2022-01-06T08:04:44.925+02:00"
+            jcr:lastModified="{Date}2022-01-10T06:51:10.355+02:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

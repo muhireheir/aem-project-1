@@ -4,7 +4,7 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2022-01-06T13:02:45.466+02:00"
+        cq:lastModified="{Date}2022-01-10T20:22:12.172+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/ucs-exercise-heritier/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
@@ -35,6 +35,156 @@
                 title="&lt;p>WELCOME TO&lt;/p>&#xd;&#xa;&lt;p>OUR NEWS MAGAZINE&lt;/p>&#xd;&#xa;"
                 type="article"/>
         </slides>
+        <unicredit-header jcr:primaryType="nt:unstructured">
+            <unicredit-header-level1 jcr:primaryType="nt:unstructured">
+                <unicredit-heading-icons
+                    jcr:lastModified="{Date}2022-01-10T07:26:34.060+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ucs-exercise-heritier/components/heading/icons">
+                    <navIcons jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-contattaci2"
+                            label="Contact Us"
+                            path="/content/ucs-exercise-heritier/us/en/about-us/unicredit"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-calendar"
+                            label="Calendar"
+                            path="/content/ucs-exercise-heritier/us/en/business"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-estero2"
+                            label="World wide"
+                            path="/content/ucs-exercise-heritier/us/en/investors"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-search"
+                            label="Search"
+                            path="/content/ucs-exercise-heritier/us/en/press-media"/>
+                    </navIcons>
+                </unicredit-heading-icons>
+                <unicredit-logo
+                    jcr:lastModified="{Date}2022-01-10T07:28:58.822+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ucs-exercise-heritier/components/img"
+                    altValueFromDAM="true"
+                    displayPopupTitle="true"
+                    fileReference="/content/dam/ucs-exercise-heritier/logoHiRes.png"
+                    isDecorative="false"
+                    titleValueFromDAM="true"/>
+            </unicredit-header-level1>
+        </unicredit-header>
+        <footer jcr:primaryType="nt:unstructured">
+            <unicredit-footer-img
+                jcr:lastModified="{Date}2022-01-10T07:29:13.827+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ucs-exercise-heritier/components/footer-logo"
+                altValueFromDAM="true"
+                displayPopupTitle="true"
+                fileReference="/content/dam/ucs-exercise-heritier/basics-logo-negative.svg"
+                isDecorative="false"
+                titleValueFromDAM="true"/>
+            <unicredit-footer-utils
+                jcr:lastModified="{Date}2022-01-10T07:32:59.551+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ucs-exercise-heritier/components/footer-utils">
+                <footerUtils jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en"
+                        target="_blank"
+                        title="Lorem Ipsum"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/business"
+                        target="_blank"
+                        title="Utils text"/>
+                </footerUtils>
+            </unicredit-footer-utils>
+            <unicredit-footer-copyright
+                jcr:lastModified="{Date}2022-01-10T07:33:30.380+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ucs-exercise-heritier/components/copyright"
+                text=" 20XX – 20XX UniCredit S.p.A. - All Rights reserved"/>
+            <unicredit-footer-upper
+                jcr:lastModified="{Date}2022-01-10T20:22:12.157+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ucs-exercise-heritier/components/footer-upper">
+                <linksMapFooterNav1 jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/about-us/unicredit"
+                        target="_blank"
+                        title="Contacts"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/investors"
+                        target="_blank"
+                        title="Glossary"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/press-media"
+                        target="_blank"
+                        title="System Requirements"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/investors"
+                        target="_blank"
+                        title="Site Map"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/press-media"
+                        target="_blank"
+                        title="FAQ"/>
+                </linksMapFooterNav1>
+            </unicredit-footer-upper>
+            <unicredit-footer-middle
+                jcr:lastModified="{Date}2022-01-10T07:42:56.666+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ucs-exercise-heritier/components/footer-middle">
+                <linksMapFooterMiddle jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/business"
+                        target="_blank"
+                        title="Genaral company info"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/careers"
+                        target="_blank"
+                        title="Disclaimer"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/sustainability"
+                        target="_blank"
+                        title="Privacy"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/press-media"
+                        target="_blank"
+                        title="Cookies"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        path="/content/ucs-exercise-heritier/us/en/investors"
+                        target="_blank"
+                        title="Alerts"/>
+                </linksMapFooterMiddle>
+            </unicredit-footer-middle>
+        </footer>
     </jcr:content>
     <about-us/>
+    <business/>
+    <governance/>
+    <investors/>
+    <sustainability/>
+    <press-media/>
+    <careers/>
 </jcr:root>
