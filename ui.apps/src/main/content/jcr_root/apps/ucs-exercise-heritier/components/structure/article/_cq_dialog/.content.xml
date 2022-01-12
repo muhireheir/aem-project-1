@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="basic"
+                        sling:orderBefore="advanced"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <details
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Article Page"
+                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title cq:showOnCreate="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title" name="./jcr:title" required="true"/>
+                                            <picture cq:showOnCreate="{Boolean}true" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Picture" jcr:primaryType="nt:unstructured" name="./picture"  rootPath="/content/dam"/>
+                                            <tags cq:showOnCreate="{Boolean}true" sling:resourceType="/libs/cq/gui/components/coral/common/form/tagfield" fieldLabel="Tags/Keyword" jcr:primaryType="nt:unstructured" name="./cq:tags" metaType="tags"/>
+                                            <date cq:showOnCreate="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" fieldLabel="Date" name="./date" type="date" required="{Boolean}true"/>
+                                            <description cq:showOnCreate="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea" fieldLabel="Article content" name="./description" required="true"/>
+                                        </items>
+                                    </details>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

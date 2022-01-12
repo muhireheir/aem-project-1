@@ -3,8 +3,8 @@
     <div class="heroBanner__container swiper-container">
       <div class="heroBanner__wrapper swiper-wrapper">
         <!-- TYPE 1 -->
-        <sly data-sly-list.item="${slides.childComponents}">
-          <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.title && item.type=='welcome'}"
+        <sly data-sly-list.item="${slides.orderedSlides}">
+          <div data-sly-test="${item.desktopImagePath && item.mobileImagePath  && item.type=='welcome'}"
             class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
             data-bg="${item.desktopImagePath}" data-bg-mobile="${item.mobileImagePath}">
             <!-- ##############  logo mask    -->
@@ -37,7 +37,7 @@
             </div>
           </div>
         <!-- TYPE 2 -->
-        <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.title && item.type=='article'}" class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+        <div data-sly-test="${item.desktopImagePath && item.mobileImagePath  && item.type=='article'}" class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
         data-bg="${item.desktopImagePath}" data-bg-mobile="${item.mobileImagePath}">
         <!-- ##############  logo mask    -->
         <sly data-sly-test="${item.logo=='black'}">
@@ -92,7 +92,7 @@
 
 
         <!-- TYPE 3 -->
-        <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.title && item.type=='involve'}" class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+        <div data-sly-test="${item.desktopImagePath && item.mobileImagePath && item.type=='involve'}" class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
         data-bg="${item.desktopImagePath}" data-bg-mobile="${item.mobileImagePath}">
         <!-- ##############  logo mask    -->
         <sly data-sly-test="${item.logo=='black'}">
@@ -141,7 +141,7 @@
 
 
     
-    <div class="heroBanner__modal" id="muhire">
+    <div class="heroBanner__modal">
       <div class="modal">
         <div class="modal__info">
           <div class="modal__involved text--paragraph-title">
@@ -173,8 +173,8 @@
             </p>
           </div>
         </div>
-        <div class="modal__bg" data-bg="./components/heroBanner__welcome/img/hero_modal_desk.jpg"
-          data-bg-mobile="./components/heroBanner__welcome/img/hero_modal_desk.jpg"></div>
+        <div class="modal__bg" data-bg="/content/dam/ucs-exercise-heritier/slide_3_desk.jpg"
+          data-bg-mobile="/content/dam/ucs-exercise-heritier/slide_3_desk.jpg"></div>
       </div>
       <div class="modal__top-bar container">
         <img src="/apps/ucs-exercise-heritier/clientlibs/clientlib-base/images/logo_unicredit.svg" alt="logo" />

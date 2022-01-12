@@ -173,6 +173,8 @@
                                     <subheading jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Subtitle" name="./slide2/subheaderText_involve"  />
                                     <description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Description" name="./slide2/description_involve"  />
                                     <buttonText jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Button text" name="./slide2/buttonText_involve" />
+                                    <content jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide2/modal_text" useFixedInlineToolbar="{Boolean}true"></content>
+                                    <contentImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image" fileNameParameter="./slide2/contentImage" fileReferenceParameter="./slide2/contentImagePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide2/contentImage" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true" />
                                 </items>
                                 <listeners jcr:primaryType="nt:unstructured" />
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="involve" />
@@ -259,6 +261,8 @@
                                     <subheading jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Subtitle" name="./slide3/subheaderText_involve"  />
                                     <description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Description" name="./slide3/description_involve"  />
                                     <buttonText jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Button text" name="./slide3/buttonText_involve" />
+                                    <content jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide3/modal_text" useFixedInlineToolbar="{Boolean}true"></content>
+                                    <contentImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image" fileNameParameter="./slide3/contentImage" fileReferenceParameter="./slide3/contentImagePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide3/contentImage" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}tru" />
                                 </items>
                                 <listeners jcr:primaryType="nt:unstructured" />
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="involve" />
@@ -349,6 +353,8 @@
                                     <subheading jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Subtitle" name="./slide4/subheaderText_involve"  />
                                     <description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Description" name="./slide4/description_involve"  />
                                     <buttonText jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Button text" name="./slide4/buttonText_involve" />
+                                    <content jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide4/modal_text" useFixedInlineToolbar="{Boolean}true"></content>
+                                    <contentImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image" fileNameParameter="./slide4/contentImage" fileReferenceParameter="./slide4/contentImagePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide4/contentImage" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
                                 </items>
                                 <listeners jcr:primaryType="nt:unstructured" />
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="involve" />
@@ -435,6 +441,8 @@
                                     <subheading jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Subtitle" name="./slide5/subheaderText_involve"  />
                                     <description jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea"  fieldLabel="Description" name="./slide5/description_involve"  />
                                     <buttonText jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Button text" name="./slide5/buttonText_involve" />
+                                    <content jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Title" name="./slide5/modal_text" useFixedInlineToolbar="{Boolean}true"></content>
+                                    <contentImage jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/form/fileupload" allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" fieldLabel="Image" fileNameParameter="./slide5/contentImage" fileReferenceParameter="./slide5/contentImagePath" mimeTypes="[image]" multiple="{Boolean}false" name="./slide5/contentImage" title="Image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true"/>
                                 </items>
                                 <listeners jcr:primaryType="nt:unstructured" />
                                 <granite:data jcr:primaryType="nt:unstructured" showhidetargetvalue="involve" />

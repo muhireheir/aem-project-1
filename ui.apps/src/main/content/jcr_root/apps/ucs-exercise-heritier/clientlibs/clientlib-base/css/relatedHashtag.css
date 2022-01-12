@@ -17,6 +17,12 @@
   color: #262626;
   margin: 50px 0;
 }
+.relatedHashtag a,
+.relatedHashtag a:hover,
+.relatedHashtag a:focus,
+.relatedHashtag a:visited {
+  color: #262626;
+}
 .relatedHashtag__bar {
   height: 100px;
   width: 100%;
@@ -83,7 +89,7 @@
 @media only screen and (max-width: 1024px) {
   .relatedHashtag__bar .bar__list .bar__item {
     margin-bottom: 20px;
-    padding: 0 8px;
+    padding: 0 10px;
   }
 }
 .relatedHashtag__bar .bar__list .bar__item:last-child {
@@ -92,12 +98,7 @@
 }
 .relatedHashtag__bar .bar__list .bar__item:first-child {
   padding-left: 0;
-}
-@media only screen and (max-width: 1024px) {
-  .relatedHashtag__bar .bar__list .bar__item:first-child:before {
-    left: 0;
-    width: calc(100% - 8px);
-  }
+  left: 0;
 }
 .relatedHashtag__bar .bar__list .bar__item:not(.bar__item--active):hover {
   color: #909090;
@@ -109,15 +110,23 @@
 .relatedHashtag__bar .bar__list .bar__item--active:before {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 10px;
   height: 3px;
   width: calc(100% - 20px);
   bottom: -4px;
   background-color: #00a2c1;
 }
+.relatedHashtag__bar .bar__list .bar__item--active:first-child:before {
+  left: 0px;
+  width: calc(100% - 10px);
+}
+.relatedHashtag__bar .bar__list .bar__item--active:last-child:before {
+  left: 10px;
+  width: 100%;
+}
 @media only screen and (max-width: 1024px) {
-  .relatedHashtag__bar .bar__list .bar__item--active:before {
-    width: calc(100% - 16px);
+  .relatedHashtag__bar .bar__list .bar__item--active:last-child:before {
+    width: calc(100% - 10px);
   }
 }
 .relatedHashtag__result {
@@ -146,7 +155,7 @@
 .relatedHashtag__result .result__cta .result__number .results {
   font-size: 20px;
 }
-.relatedHashtag__result .result__cta .result__close .close {
+.relatedHashtag__result .result__cta .result__close .icon-close {
   cursor: pointer;
   padding: 4px;
   border-radius: 50%;

@@ -1,0 +1,32 @@
+<div class="relatedHashtag container-fixed" data-sly-use.model="it.codeland.heritier.core.models.TagsManager">
+  <div class="relatedHashtag__bar container">
+    <div class="bar__title text--subtitle">${properties.title} :</div>
+    <div class="bar__list">
+      <sly data-sly-list.tag="${model.allTags}">
+        <div data-hashtag="${tag}" data-maxresult="${properties.maxresult}" class="bar__item text--body">
+          #${tag}
+        </div>
+      </sly>
+    </div>
+  </div>
+  <div class="relatedHashtag__result container">
+    <div class="result__cta">
+      <div class="result__number">
+        <span class="number text--paragraph-title">0</span>
+        <span class="results text--body">${properties.totalLabel}</span>
+      </div>
+      <div class="result__close">
+        <span class="text--label">${properties.closeLabel}</span>
+        <span class="icon icon-close"></span>
+      </div>
+    </div>
+    <div class="result__cards">
+      <div class="swiper-container">
+        <div class="swiper-wrapper"></div>
+
+        <!-- pagination -->
+        <div class="swiper-pagination" data-hero-pagination data-pagination></div>
+      </div>
+    </div>
+  </div>
+</div>

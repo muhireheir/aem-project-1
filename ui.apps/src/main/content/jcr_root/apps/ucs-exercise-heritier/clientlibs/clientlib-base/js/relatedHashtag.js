@@ -8,14 +8,14 @@ $(document).ready(function () {
       $(".relatedHashtag .bar__item").removeClass("bar__item--active");
       $(this).addClass("bar__item--active");
       $(".relatedHashtag__result").fadeIn();
-      var parm = $(this).attr("data-hashtag");
-      var max = $(this).attr("data-maxarticle");
-      getResult(parm, max);
+      var tag = $(this).attr("data-hashtag");
+      var maxResults = $(this).attr("data-maxresult");
+      getResult(tag, maxResults);
     }
   });
 
   // Close Click
-  $(document).on("click", ".relatedHashtag .close", function () {
+  $(document).on("click", ".relatedHashtag .icon-close", function () {
     $(".relatedHashtag__result").fadeOut();
     $(".relatedHashtag .bar__item").removeClass("bar__item--active");
   });
@@ -115,7 +115,7 @@ $(document).ready(function () {
             ".relatedHashtag__result .swiper-wrapper .card"
           ).last();
 
-          lastCard.attr("href", cardData.link);
+          lastCard.attr("href", cardData.link+'.html');
 
           lastCard
             .find(".card__bg")
@@ -124,11 +124,11 @@ $(document).ready(function () {
 
           addBg($(window).width());
 
-          lastCard.find(".card__hashtag").text(cardData.tags[0]);
+          lastCard.find(".card__hashtag").text(cardData.hashtag);
 
           lastCard.find(".card__date").text(cardData.date);
 
-          lastCard.find(".card__desc").text(cardData.articleAbstract);
+          lastCard.find(".card__desc").text(cardData.text);
 
           counter = counter + 1;
           if (counter > numberOfSlider) {
@@ -140,8 +140,7 @@ $(document).ready(function () {
       $(".result__number .number").text(0);
     }
   }
-
-  function getResult(parm, max) {
+  function getResult(tag, maxresult) {
     // Remove previus html and slider
     if ($(".relatedHashtag .swiper-slide-active").length > 0) {
       $(".relatedHashtag .swiper-container")[0].swiper.destroy();
@@ -150,7 +149,7 @@ $(document).ready(function () {
     $(".relatedHashtag__result .swiper-slide").remove();
 
     $.ajax({
-      url: `/bin/hashtag?tag=${parm}&max=${max}`,
+      url: `/bin/relatedTags?tag=${tag}&max=${maxresult}`,
       type: "GET",
       success: function (res) {
         dataHashtag = res;
