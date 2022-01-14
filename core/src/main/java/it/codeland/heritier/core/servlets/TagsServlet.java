@@ -49,7 +49,7 @@ public class TagsServlet extends SlingSafeMethodsServlet {
         Workspace workspace = session.getWorkspace();
         QueryManager queryManager = workspace.getQueryManager();
         String maxLen = req.getParameter("max") == null ? "20" : req.getParameter("max");
-        String rawQuery="SELECT * FROM [cq:PageContent] AS magazines WHERE ISDESCENDANTNODE ([/content/ucs-exercise-heritier/magazine])  AND magazines.[cq:tags] LIKE '%"+tag+"%'  ORDER BY [jcr:created] ASC";
+        String rawQuery="SELECT * FROM [cq:PageContent] AS magazines WHERE ISDESCENDANTNODE ([/content/ucs-exercise-heritier/magazine])  AND magazines.[cq:tags] = '"+tag+"'  ORDER BY [jcr:created] ASC";
         Query query = queryManager.createQuery(rawQuery, Query.JCR_SQL2);
         query.setLimit(Integer.parseInt(maxLen));
         QueryResult result = query.execute();
