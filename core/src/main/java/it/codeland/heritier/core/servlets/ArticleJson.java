@@ -41,6 +41,7 @@ public class ArticleJson extends SlingSafeMethodsServlet {
             resp.setContentType("text/json");
             resp.getWriter().write(json);
         } catch (Exception e) {
+            
             resp.setContentType("text/plain");
             resp.getWriter().write(e.getMessage());
         }
