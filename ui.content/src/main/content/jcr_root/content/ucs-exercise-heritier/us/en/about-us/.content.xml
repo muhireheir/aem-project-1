@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2022-01-11T15:24:16.337+02:00"
+        cq:lastModified="{Date}2022-01-14T09:51:44.952+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/ucs-exercise-heritier/templates/home"
         jcr:primaryType="cq:PageContent"
@@ -112,16 +112,17 @@
                 type="welcome"/>
         </slides>
         <related-tags
-            jcr:lastModified="{Date}2022-01-11T15:24:16.326+02:00"
+            jcr:lastModified="{Date}2022-01-14T09:51:44.941+02:00"
             jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="ucs-exercise-heritier/components/tags"
-            closeLabel="hide"
+            closeLabel="close"
             maxArticle="10"
-            maxresult="14"
-            tags="[workflow:,forum:,we-retail:,experience-fragments:variation/web]"
+            maxresult="4"
+            tags="[workflow:,forum:,forum:topic]"
             title="Related Hashtag"
-            totalLabel="Results"/>
+            totalLabel="Results"
+            type="[Download,Link,Add]"/>
     </jcr:content>
     <clients/>
     <our-people/>

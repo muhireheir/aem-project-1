@@ -2,9 +2,9 @@
   <div class="relatedHashtag__bar container">
     <div class="bar__title text--subtitle">${properties.title} :</div>
     <div class="bar__list">
-      <sly data-sly-list.tag="${model.allTags}">
-        <div data-hashtag="${tag}" data-maxresult="${properties.maxresult}" class="bar__item text--body">
-          #${tag}
+      <sly data-sly-list.tag="${model.tagsHashMap}">
+        <div data-hashtag="${tag.old}" data-maxresult="${properties.maxresult}" class="bar__item text--body">
+          #${tag.tag}
         </div>
       </sly>
     </div>
