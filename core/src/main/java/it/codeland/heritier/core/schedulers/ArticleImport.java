@@ -87,14 +87,21 @@ public class ArticleImport implements Runnable {
             ResourceResolver resourceResolver = resolver.getResourceResolver();
             CsvReader csvReader = new CsvReader(resourceResolver);
             Iterator<String[]> data = csvReader.getData();
-            PageCreator pageCreator = new PageCreator(resourceResolver);
-            pageCreator.createPagesFromCsv(data);
-
-
+            PageCreator pageCreator = new PageCreator(resourceResolver,data);
+            String  result = pageCreator.createPagesFromCsv();
             // this loop might messup the programm
-            while(data.hasNext()){
-                log.info("\n\n\n **** data from file ****\n {}\n\n", data.next()[0]);
-            }
+            log.info("\n **** created! {} ****\n", result);
+
+            // ###################################33
+            // ###################################33
+            // ###################################33
+            // ###################################33
+
+            // WORK IN PROGRESS
+
+
+            //     GET LAST MODIFIED OF THE ASSET
+            
         } catch (Exception e) {
             log.info("ERROR!!! {}",e.getMessage());
         }

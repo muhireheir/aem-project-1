@@ -23,7 +23,7 @@ public class CsvReader {
     }
     public Iterator<String[]> getData(){
         try {
-            resource = resourceResolver.getResource("/content/dam/ucs-exercise-heritier/items.csv");
+            resource = resourceResolver.getResource("/content/dam/ucs-exercise-heritier/articles.csv");
             if(resource==null){
                 log.error("Resource not found");
                 return null;
