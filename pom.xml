@@ -185,6 +185,20 @@ Bundle-DocURL:
                             <artifactId>org.apache.sling.bnd.models</artifactId>
                             <version>1.0.0</version>
                         </dependency>
+                        <dependency>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-ui.content</artifactId>
+                            <version>5.1.2</version>
+                            <type>zip</type>
+                            <classifier>min</classifier> <!-- optional, see below -->
+                        </dependency>
+                        <dependency>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-ui.apps</artifactId>
+                            <version>5.1.2</version>
+                            <type>zip</type>
+                            <classifier>min</classifier> <!-- optional, see below -->
+                        </dependency>
                     </dependencies>
                 </plugin>
                 <plugin>

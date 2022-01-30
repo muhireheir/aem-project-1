@@ -8,62 +8,80 @@
         sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
         <items jcr:primaryType="nt:unstructured">
             <column
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
                     <well-multifield
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/well"
-                            fieldLabel="Upper nav Links">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        fieldLabel="Upper nav Links">
                         <items jcr:primaryType="nt:unstructured">
                             <socials
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                    composite="{Boolean}true"
-                                    fieldDescription="Upper nav links"
-                                    fieldLabel="Upper nav links"
-                                    required="{Boolean}false"
-                                    name="socials" >
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Upper nav links"
+                                fieldLabel="Upper nav links"
+                                name="socials"
+                                required="{Boolean}false">
                                 <field
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/container"
-                                        emptyText="Upper Nav Links"
-                                        name="./socials">
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Upper Nav Links"
+                                    name="./socials">
                                     <items jcr:primaryType="nt:unstructured">
                                         <link
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                emptyText="Link To"
-                                                fieldLabel="Link To"
-                                                name="./link"/>
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="Link To"
+                                            fieldLabel="Link To"
+                                            name="./link"/>
                                         <icon
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                                emptyText="Select  Icon"
-                                                fieldLabel="Select Social media Icon"
-                                                name="./icon"
-                                        >
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            emptyText="Select  Icon"
+                                            fieldLabel="Select Social media Icon"
+                                            name="./icon">
                                             <items jcr:primaryType="nt:unstructured">
-                                                <option1 jcr:primaryType="nt:unstructured" text="Twitter Icon" value="twitter"/>
-                                                <option2 jcr:primaryType="nt:unstructured" text="Youtube Icon" value="youtube" />
-                                                <option3 jcr:primaryType="nt:unstructured" text="Face book Icon" value ="facebook"/>
-                                                <option4 jcr:primaryType="nt:unstructured" text="Instagram Icon" value ="instagram"/>
-                                                <option5 jcr:primaryType="nt:unstructured" text="Linkedin Icon" value ="linkedin"/>
+                                                <option1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Twitter Icon"
+                                                    value="twitter"/>
+                                                <option2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Youtube Icon"
+                                                    value="youtube"/>
+                                                <option3
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Face book Icon"
+                                                    value="facebook"/>
+                                                <option4
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Instagram Icon"
+                                                    value="instagram"/>
+                                                <option5
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Linkedin Icon"
+                                                    value="linkedin"/>
                                             </items>
                                         </icon>
                                         <target
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                                emptyText="Select Target"
-                                                fieldLabel="Select Target"
-                                                name="./target"
-                                        >
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            emptyText="Select Target"
+                                            fieldLabel="Select Target"
+                                            name="./target">
                                             <items jcr:primaryType="nt:unstructured">
-                                                <option1 jcr:primaryType="nt:unstructured" text="New Tab" value="_blank"/>
-                                                <option2 jcr:primaryType="nt:unstructured" text="This Tab" value="#" />
+                                                <option1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="New Tab"
+                                                    value="_blank"/>
+                                                <option2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="This Tab"
+                                                    value="#"/>
                                             </items>
                                         </target>
-
                                     </items>
                                 </field>
                             </socials>

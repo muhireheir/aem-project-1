@@ -1,0 +1,122 @@
+.ucs-grid-item {
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .ucs-grids-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+    padding: 10px 15px 10px 5px;
+  }
+  
+  .media-item{
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+  }
+  .grid-item-content-container{
+    width: 98%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5em 2em 2em 2em;
+  }
+  
+  .h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .h2{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .h3{
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .h4{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .h5{
+    font-size: 0.7em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .h6{
+    font-size: 0.6em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  .text-white{
+    color:#fff;
+  }
+  .text-center{
+    text-align: center;
+  }
+  
+  .item-content{
+    position: relative;
+  }
+  .card-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 10px;
+  }
+  .card-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    align-items: flex-end;
+    bottom: 0;
+    height: 50px;
+  }
+  .p-0{
+    padding:0;
+    margin: 0;
+  }
+  .has-p >p{
+    display: block;
+    margin-block-start:0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .atomic-btn{
+    background-color: rgb(37, 84, 211);
+    border:none;
+    outline: none;
+    color:white;
+    font-weight: bold;
+    min-width: 100px;
+    min-height:40px;
+    border-radius: 5px;
+  }
+  
+  .card-btn > .atomic-btn{
+    height: 40px !important;
+  }

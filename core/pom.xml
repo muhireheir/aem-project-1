@@ -203,8 +203,6 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>opencsv</artifactId>
             <version>4.1</version>
         </dependency>
-
-
         <!-- Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>

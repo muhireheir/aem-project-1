@@ -1,0 +1,30 @@
+<section class="ucs-grid-item">
+  <div class="bg-holder" data-sly-test="${properties.background=='image'}">
+    <sly data-sly-resource="${'image-1' @resourceType = 'ucs-exercise-heritier/components/atomic/image'}"></sly>
+  </div>
+
+
+  <div class="bg-holder" data-sly-test="${properties.background=='video'}">
+    <sly data-sly-resource="${'video-1' @resourceType = 'ucs-exercise-heritier/components/atomic/video'}"></sly>
+  </div>
+
+  <div data-sly-test="${!properties.background}" class="media-item no-bg">
+  </div>
+  <div class="grid-item-content-container">
+    <div class="item-content">
+      <div class="card-title">
+        <div class="h1 text-white has-p">
+          <p data-sly-resource="${'title' @resourceType = 'ucs-exercise-heritier/components/atomic/title'}"></p>
+        </div>
+      </div>
+      <div class="card-text text-center text-white">
+        <div class="atomic-text-component">
+          <p data-sly-resource="${'text' @resourceType = 'ucs-exercise-heritier/components/atomic/text'}"></p>
+        </div>
+      </div>
+      <div class="card-btn">
+        <button class="atomic-btn">Exprole</button>
+      </div>
+    </div>
+  </div>
+</section>

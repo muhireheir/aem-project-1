@@ -1,0 +1,4 @@
+name,code,category,brand,cost,price,unit,stock_alert,note
+Sample product,454378,electronics,gucci,15,20,KG,0,details product 1
+Second product,4444,electronics,Nike,30,45,KG,10,details product 2
+onother product,78685,electronics,,5,7,KG,50,details product 3

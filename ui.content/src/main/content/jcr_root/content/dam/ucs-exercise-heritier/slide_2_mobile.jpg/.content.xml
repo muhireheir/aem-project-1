@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="773c8171-2816-4eff-bb1e-244bcc95d0b1">
     <jcr:content
+        cq:lastReplicated="{Date}2022-01-29T16:17:25.045+02:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="slide_2_mobile.jpg"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
         jcr:lastModified="{Date}2022-01-10T06:51:15.453+02:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"

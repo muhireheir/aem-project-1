@@ -17,6 +17,7 @@ public class CsvReader {
 
     Resource resource;
     ResourceResolver resourceResolver;
+    private long lastModified;
     
     public  CsvReader(ResourceResolver resourceResolver ){
         this.resourceResolver=resourceResolver;
@@ -30,6 +31,8 @@ public class CsvReader {
             }
             Asset asset = resource.adaptTo(Asset.class);
             Rendition assetRendition = asset.getOriginal();
+            lastModified = assetRendition.getAsset().getLastModified();
+            log.info("last modified: {}", lastModified);
             InputStream inputStream = assetRendition.getStream();
             Csv csv = new Csv();
             Iterator<String[]> csvData = csv.read(inputStream,null);
@@ -39,5 +42,9 @@ public class CsvReader {
             return null;
         }
        
+    }
+
+    public long getLastModified(){
+        return lastModified;
     }
 }

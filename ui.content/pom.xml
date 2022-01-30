@@ -68,6 +68,7 @@
                             <artifactId>ucs-exercise-heritier.ui.apps</artifactId>
                             <version>${project.version}</version>
                         </dependency>
+                        
                     </dependencies>
                 </configuration>
             </plugin>
@@ -78,6 +79,13 @@
                 <configuration>
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-content</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
                 </configuration>
             </plugin>
         </plugins>
@@ -102,6 +110,12 @@
             <groupId>com.adobe.aem</groupId>
             <artifactId>uber-jar</artifactId>
             <classifier>apis</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-content</artifactId>
+            <version>5.1.2</version>
+            <type>content-package</type>
         </dependency>
     </dependencies>
 </project>

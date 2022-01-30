@@ -1,4 +1,5 @@
 package it.codeland.heritier.core.schedulers;
+
 import org.apache.sling.commons.scheduler.ScheduleOptions;
 import org.apache.sling.commons.scheduler.Scheduler;
 import org.osgi.service.component.annotations.Activate;
@@ -14,8 +15,11 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
+import it.codeland.heritier.core.helpers.ArticleImportStatus;
 import it.codeland.heritier.core.helpers.CsvReader;
 import it.codeland.heritier.core.helpers.PageCreator;
 import it.codeland.heritier.core.helpers.ResourceHelper;
@@ -36,76 +40,66 @@ public class ArticleImport implements Runnable {
     private int schedulerId;
 
     @Reference
-    private ResourceResolverFactory resourceFactory; 
-
-    @Activate
-    protected void activate(ArticleConfig config) {
-        if (config.enabled()) {
-            schedulerId = config.schdulerName().hashCode();
-        }
-    }
+    private ResourceResolverFactory resourceFactory;
 
     @Modified
-    protected void modified(ArticleConfig config) {
-        log.info("\n\n\n\n\n\n\n\n\n\n\n OSGI config changed \n\n\n\n\n\n\n\n\n\n\n");
+    @Activate
+    protected void activate(ArticleConfig config) {
 
-        removeScheduler();
         schedulerId = config.schdulerName().hashCode();
         addScheduler(config);
     }
 
-    private void removeScheduler() {
-        log.info("\n\n\n\n\n\n\n\n\n Removing scheduler: {} \n\n\n\n\n", schedulerId);
-        scheduler.unschedule(String.valueOf(schedulerId));
-    }
+    // protected void modified(ArticleConfig config) {
+    // log.info("\n\n\n\n\n\n\n\n\n\n\n OSGI config changed
+    // \n\n\n\n\n\n\n\n\n\n\n");
+
+    // removeScheduler();
+    // schedulerId = config.schdulerName().hashCode();
+    // addScheduler(config);
+    // }
+
+    // private void removeScheduler() {
+    // log.info("\n\n\n\n\n\n\n\n\n Removing scheduler: {} \n\n\n\n\n",
+    // schedulerId);
+    // scheduler.unschedule(String.valueOf(schedulerId));
+    // }
 
     private void addScheduler(ArticleConfig config) {
-        if (config.enabled()) {
-            ScheduleOptions scheduleOptions = scheduler.EXPR(config.cronExpression());
-            scheduleOptions.name(config.schdulerName());
-            scheduleOptions.canRunConcurrently(false);
-            scheduler.schedule(this, scheduleOptions);
-            log.info("\n\n\n\n\n\n\n\n\n\n\n Schedure added \n\n\n\n\n\n\n\n\n\n\n");
-
-        } else {
-            log.info("\n\n\n\n\n\n\n\n\n\n\n ArticleImport is disabled \n\n\n\n\n\n\n\n\n\n\n");
-        }
-
+        ScheduleOptions scheduleOptions = scheduler.EXPR(config.cronExpression());
+        scheduleOptions.name(config.schdulerName());
+        scheduleOptions.canRunConcurrently(false);
+        scheduler.schedule(this, scheduleOptions);
+        log.info("\n\n\n\n\n\n\n\n\n\n\n Schedure added \n\n\n\n\n\n\n\n\n\n\n");
     }
 
-    @Deactivate
-    protected void deactivate(ArticleConfig config) {
-        log.info("\n\n\n\n\n\n\n\n\n disactivate scheduler: {} \n\n\n\n\n", schedulerId);
-        removeScheduler();
-    }
+    // @Deactivate
+    // protected void deactivate(ArticleConfig config) {
+    // log.info("\n\n\n\n\n\n\n\n\n disactivate scheduler: {} \n\n\n\n\n",
+    // schedulerId);
+    // removeScheduler();
+    // }
 
     @Override
     public void run() {
-        log.info("\n\n\n ######## JOB RUNNING smoothly! ######## \n\n\n");
+        ArticleImportStatus status = new ArticleImportStatus();
+        log.info("\n######## JOB RUNNING ########\n");
         try {
             ResourceHelper resolver = new ResourceHelper(resourceFactory);
             ResourceResolver resourceResolver = resolver.getResourceResolver();
             CsvReader csvReader = new CsvReader(resourceResolver);
             Iterator<String[]> data = csvReader.getData();
-            PageCreator pageCreator = new PageCreator(resourceResolver,data);
-            String  result = pageCreator.createPagesFromCsv();
-            // this loop might messup the programm
-            log.info("\n **** created! {} ****\n", result);
+            List<String[]> articles = new ArrayList<String[]>();
 
-            // ###################################33
-            // ###################################33
-            // ###################################33
-            // ###################################33
-
-            // WORK IN PROGRESS
-
-
-            //     GET LAST MODIFIED OF THE ASSET
-            
+            while (data.hasNext()) {
+                articles.add(data.next());
+            }
+            Long lastModified = csvReader.getLastModified();
+            PageCreator pageCreator = new PageCreator(resourceResolver, articles, status);
+            String result = pageCreator.createPagesFromCsv(lastModified, articles);
+            log.info("\n\n\n{}\n\n\n", result);
         } catch (Exception e) {
-            log.info("ERROR!!! {}",e.getMessage());
+            log.info("ERROR!!! {}", e.getMessage());
         }
     }
 }
-
- 

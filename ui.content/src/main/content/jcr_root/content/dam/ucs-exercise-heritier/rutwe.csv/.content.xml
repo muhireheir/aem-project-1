@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="354b455e-539f-44e0-9408-8101ddbc8fbd">
+    <jcr:content
+        cq:name="rutwe.csv"
+        cq:parentPath="/content/dam/ucs-exercise-heritier"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2022-01-24T19:23:11.567+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2022-01-24T19:23:11.143+02:00"
+            dam:sha1="2a0b6072dc97b025a8c3541abac5f7c754c94b68"
+            dam:size="{Long}234"
+            dc:format="text/csv"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

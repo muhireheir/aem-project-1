@@ -211,7 +211,12 @@
                     jcr:title="Page Root"
                     sling:resourceType="wcm/core/components/policy/policy"
                     components="[group:Unicredit site - Content,/apps/ucs-exercise-heritier/components/form/container,group:Unicredit site - Structure]">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <jcr:content
+                        cq:lastReplicated="{Date}2022-01-27T18:34:35.259+02:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
                             <mapping_1575024218483
@@ -241,7 +246,12 @@
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
                     components="[group:Unicredit site - Content,/apps/ucs-exercise-heritier/components/form/container]">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <jcr:content
+                        cq:lastReplicated="{Date}2022-01-27T18:34:35.259+02:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
                             <mapping_1575030255082
@@ -336,9 +346,42 @@
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[ucs-exercise-heritier.dependencies,ucs-exercise-heritier.site]"
                     clientlibsJsHead="ucs-exercise-heritier.dependencies">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <jcr:content
+                        cq:lastReplicated="{Date}2022-01-27T18:34:35.259+02:00"
+                        cq:lastReplicatedBy="admin"
+                        cq:lastReplicationAction="Activate"
+                        jcr:mixinTypes="[cq:ReplicationStatus]"
+                        jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
+            <structure jcr:primaryType="nt:unstructured">
+                <content-page jcr:primaryType="nt:unstructured"/>
+                <gallery jcr:primaryType="nt:unstructured"/>
+            </structure>
+            <footer jcr:primaryType="nt:unstructured"/>
         </components>
     </ucs-exercise-heritier>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <parsys jcr:primaryType="nt:unstructured">
+                    <policy_1643434400146
+                        jcr:lastModified="{Date}2022-01-29T13:04:32.476+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="allowed component"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:heritier unicredit  - Content,group:ucs-exercise-heritier,group:Unicredit - Content,group:Unicredit heritier - Content,group:Unicredit site - Content,group:Unicredit site-Content,group:Unicredit-heriter - Content]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2022-01-29T13:04:43.130+02:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </policy_1643434400146>
+                </parsys>
+            </components>
+        </foundation>
+    </wcm>
 </jcr:root>

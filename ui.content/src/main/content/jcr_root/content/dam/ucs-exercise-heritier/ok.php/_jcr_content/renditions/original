@@ -1,0 +1,29 @@
+->where(function ($query) {
+return $query->whereHas('warehouse', function ($otherQuery) {
+return $otherQuery->where('organization_id', '=', Auth::user()->organization_id);
+});
+})
+
+
+
+
+
+
+[['deleted_at', '=', null], ['organization_id', '=', Auth::user()->organization_id]]
+
+
+
+
+
+->where(function ($query) {
+return $query->whereHas('client', function ($otherQuery) {
+return $otherQuery->where('organization_id', '=', Auth::user()->organization_id);
+});
+})
+
+
+->where(function ($query) {
+return $query->whereHas('product', function ($otherQuery) {
+return $otherQuery->where('organization_id', '=', Auth::user()->organization_id);
+});
+})

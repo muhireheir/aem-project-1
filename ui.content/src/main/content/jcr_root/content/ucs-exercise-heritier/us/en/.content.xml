@@ -4,7 +4,7 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2022-01-10T20:22:12.172+02:00"
+        cq:lastModified="{Date}2022-01-29T07:38:59.608+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/ucs-exercise-heritier/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
@@ -89,7 +89,7 @@
                 isDecorative="false"
                 titleValueFromDAM="true"/>
             <unicredit-footer-utils
-                jcr:lastModified="{Date}2022-01-10T07:32:59.551+02:00"
+                jcr:lastModified="{Date}2022-01-29T07:38:59.594+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="ucs-exercise-heritier/components/footer-utils">
@@ -113,32 +113,27 @@
                 sling:resourceType="ucs-exercise-heritier/components/copyright"
                 text=" 20XX – 20XX UniCredit S.p.A. - All Rights reserved"/>
             <unicredit-footer-upper
-                jcr:lastModified="{Date}2022-01-10T20:22:12.157+02:00"
+                jcr:lastModified="{Date}2022-01-29T07:38:46.092+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="ucs-exercise-heritier/components/footer-upper">
                 <linksMapFooterNav1 jcr:primaryType="nt:unstructured">
                     <item0
                         jcr:primaryType="nt:unstructured"
-                        path="/content/ucs-exercise-heritier/us/en/about-us/unicredit"
-                        target="_blank"
-                        title="Contacts"/>
-                    <item1
-                        jcr:primaryType="nt:unstructured"
                         path="/content/ucs-exercise-heritier/us/en/investors"
                         target="_blank"
                         title="Glossary"/>
-                    <item2
+                    <item1
                         jcr:primaryType="nt:unstructured"
                         path="/content/ucs-exercise-heritier/us/en/press-media"
                         target="_blank"
                         title="System Requirements"/>
-                    <item3
+                    <item2
                         jcr:primaryType="nt:unstructured"
                         path="/content/ucs-exercise-heritier/us/en/investors"
                         target="_blank"
                         title="Site Map"/>
-                    <item4
+                    <item3
                         jcr:primaryType="nt:unstructured"
                         path="/content/ucs-exercise-heritier/us/en/press-media"
                         target="_blank"

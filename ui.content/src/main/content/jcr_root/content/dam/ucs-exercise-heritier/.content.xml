@@ -3,6 +3,8 @@
     jcr:primaryType="sling:OrderedFolder">
     <jcr:content
         cq:conf="/conf/ucs-exercise-heritier"
+        jcr:created="{Date}2022-01-10T06:51:00.752+02:00"
+        jcr:createdBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="Unicredit site">
         <folderThumbnail/>
@@ -22,4 +24,21 @@
     <slide_3_mobile.jpg/>
     <logoHiRes.png/>
     <basics-logo-negative.svg/>
+    <testimage.png/>
+    <testimages.png/>
+    <uoloaded.png/>
+    <rutwerwange.png/>
+    <new_file.csv/>
+    <names.csv/>
+    <articles01.csv/>
+    <files.csv/>
+    <rutwe.csv/>
+    <items.csv/>
+    <articles.csv/>
+    <ok.php/>
+    <pascal.JPG/>
+    <eric-rutwe.jpeg/>
+    <charmed.jpg/>
+    <paco.JPG/>
+    <rain.mp4/>
 </jcr:root>

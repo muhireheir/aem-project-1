@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exifEX="http://cipa.jp/exif/1.0/" xmlns:psAux="http://ns.adobe.com/exif/1.0/aux/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="783c3826-1fba-4616-a557-c98ce31cac08">
+    <jcr:content
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2022-01-28T10:30:22.582+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:DigitalCreationDate="{Long}20210912"
+            dam:extracted="{Date}2022-01-28T10:30:19.861+02:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}300"
+            dam:Physicalheightininches="{Decimal}20.053333282470703"
+            dam:Physicalwidthindpi="{Long}300"
+            dam:Physicalwidthininches="{Decimal}13.386666297912598"
+            dam:Progressive="no"
+            dam:sha1="8b1171c73f16bb3ab411049e34a7cad882f87783"
+            dam:size="{Long}1697239"
+            dam:TimeCreated="{Long}215618"
+            dc:date="{Long}[20210912]"
+            dc:date_xmpArrayType="rdf:Bag"
+            dc:format="image/jpeg"
+            exifEX:LensModel="70.0-200.0 mm f/2.8"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            photoshop:DateCreated="{Date}2021-09-12T21:56:18.000+02:00"
+            photoshop:ICCProfile="sRGB IEC61966-2.1"
+            photoshop:LegacyIPTCDigest="6B28A80BA306B3283DEF4E370E005DD8"
+            psAux:Lens="70.0-200.0 mm f/2.8"
+            psAux:LensInfo="700/10 2000/10 28/10 28/10"
+            psAux:SerialNumber="9148885"
+            tiff:ImageLength="{Long}6016"
+            tiff:ImageWidth="{Long}4016"
+            xmp:CreateDate="{Date}2021-09-12T21:56:18.000+02:00"
+            xmp:CreatorTool="SkinFiner"
+            xmp:MetadataDate="{Date}2021-09-12T16:08:02.000-07:00"
+            xmp:ModifyDate="{Date}2021-09-12T16:08:02.000-07:00"
+            xmpMM:DocumentID="222809CC5CAFB641AAB8ED88EB350A70"
+            xmpMM:InstanceID="xmp.iid:18f04a99-0051-a14c-bd07-d95f583f05c9"
+            xmpMM:OriginalDocumentID="222809CC5CAFB641AAB8ED88EB350A70">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}1"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:18f04a99-0051-a14c-bd07-d95f583f05c9"
+                    stEvt:softwareAgent="Adobe Photoshop 21.2 (Windows)"
+                    stEvt:when="{Date}2021-09-12T16:08:02.000-07:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

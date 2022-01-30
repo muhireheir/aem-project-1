@@ -1,0 +1,312 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<div>
+    <div class="pt-2">
+        <div>
+            <input accept=".csv" id="uploadFile" type="file">
+            <button id="selectFile" is="coral-button" icon="upload" iconsize="S">
+                Select file
+            </button>
+            <div id="file-error" style="color: #fa7d73;font-weight:bold;">No file selected</div>
+            <div id="selected-file" style="color: #413e3e;font-weight:bold;">No file selected</div>
+        </div>
+        <div class="pt-1">
+            <button id="uploadButton" is="coral-button">
+                <span id='upload-label'>Upload csv</span>
+            </button>
+            <button is="coral-button" id="importBtn" data-toggle="modal" data-target="#exampleModalCenter">
+                Import now
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Overall progress</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <coral-alert variant="warning" id="not-modified">
+                    <coral-alert-header>File was not modified</coral-alert-header>
+                </coral-alert>
+
+                <div class="col-12 mb-4">
+                    <div class="bg-white rounded-lg p-5">
+                        <!-- Progress bar 1 -->
+                        <div id="uuu" class="progress mx-auto" data-value='0'>
+                            <span class="progress-left">
+                                <span class="progress-bar border-primary"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar border-primary"></span>
+                            </span>
+                            <div
+                                class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold"><span id="pg">0</span><sup class="small">%</sup></div>
+                            </div>
+                        </div>
+                        <!-- END -->
+
+                        <!-- Demo info -->
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div id="created" class="h4 font-weight-bold mb-0">0</div><span
+                                    class="small text-gray">Created</span>
+                            </div>
+                            <div class="col-6">
+                                <div id="skiped" class="h4 font-weight-bold mb-0">0</div><span
+                                    class="small text-gray">Skipped</span>
+                            </div>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+
+
+                <!-- bodyy -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.js"
+    integrity="sha512-II/TvxJGs27N3NEu/WWRFtyhBdSByZwS5ovX1vHXVsi2JXj0I5hRvHwgBPKbzZDk0wsKVDoEUEI8rAYGEF394A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var file;
+    var isChanged = true;
+    $("#uploadFile").change(function (e) {
+        file = e.target.files[0];
+        $("#selected-file").css("display", "block");
+        $("#file-error").css("display", "none");
+        $("#selected-file").text(file.name);
+    })
+    $("#uploadButton").click(function () {
+        if (file) {
+            uploadFile();
+        } else {
+            $("#file-error").css("display", "block");
+        }
+    })
+    $("#selectFile").click(function () {
+        $("#uploadFile").click();
+    })
+    async function uploadFile() {
+        var url = "http://localhost:4502/api/assets/ucs-exercise-heritier/articles.csv";
+        try {
+            $("#upload-label").text("Uploading...");
+            var response = await axios.put(url, file, {
+                headers: {
+                    'Content-Type': 'application/octet-stream'
+                }
+            })
+            $("#upload-label").text("Uploaded");
+            console.log(response.data);
+        } catch (error) {
+            $("#upload-label").text("Upload csv");
+            console.log(error.response.data);
+        }
+    }
+    var interval;
+    async function startImport() {
+        var url = "http://localhost:4502/bin/article-tool";
+        try {
+            var response = await axios.post(url);
+            console.log(response.data);
+        } catch (error) {
+            console.log(error.response.data);
+        }
+    }
+
+    async function getStatus() {
+        var url = "http://localhost:4502/bin/article-tool";
+        try {
+            var response = await axios.get(url);
+            var status = response.data;
+            var tot = status['skipped'] + status['created'];
+            $('#created').text(status['created']);
+            $('#skiped').text(status['skipped']);
+
+            if (!status['modified']) {
+                $("#not-modified").css("display", "block");
+                clearInterval(interval);
+            }
+            if (status['size'] == (tot) || status['modified'] == false) {
+                clearInterval(interval);
+            }
+            var progress = (tot) / status['size'] * 100;
+            $("#pg").text(progress.toFixed(0));
+            // $("#progressBar").val(progress);
+            $("#uuu").attr("data-value", progress);
+            checkProgress($("#uuu"));
+        } catch (error) {
+            console.log(error.response.data);
+        }
+    }
+
+    $("#importBtn").click(function () {
+        $("#not-modified").css("display", "none");
+        startImport();
+        setTimeout(function () {
+            interval = setInterval(getStatus, 1000);
+        }, 20);
+    })
+
+    $(".progress").each(function () {
+        checkProgress($(this));
+    });
+
+    function checkProgress(element) {
+
+        var value = element.attr('data-value');
+        var left = element.find('.progress-left .progress-bar');
+        var right = element.find('.progress-right .progress-bar');
+
+        if (value > 0) {
+            if (value <= 50) {
+                right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+            } else {
+                right.css('transform', 'rotate(180deg)')
+                left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+            }
+        }
+    }
+
+    function percentageToDegrees(percentage) {
+
+        return percentage / 100 * 360
+
+    }
+    $("#exampleModalCenter").on('hide.bs.modal', function (e) {
+
+        $("#uuu").attr('data-value',"0");
+
+    });
+</script>
+
+
+<style>
+    #file-error {
+        display: none;
+    }
+
+    #not-modified {
+        display: none;
+    }
+
+    #selected-file {
+        display: none;
+    }
+
+    #uploadFile {
+        display: none;
+    }
+
+    #layer-1 {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(26, 22, 22, 0.589);
+        top: 100px;
+        left: 0px;
+    }
+
+    .progress {
+        width: 150px;
+        height: 150px;
+        background: none;
+        position: relative;
+    }
+
+    .progress::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 6px solid #eee;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .progress>span {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .progress .progress-left {
+        left: 0;
+    }
+
+    .progress .progress-bar {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border-width: 6px;
+        border-style: solid;
+        position: absolute;
+        top: 0;
+    }
+
+    .progress .progress-left .progress-bar {
+        left: 100%;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        border-left: 0;
+        -webkit-transform-origin: center left;
+        transform-origin: center left;
+    }
+
+    .progress .progress-right {
+        right: 0;
+    }
+
+    .progress .progress-right .progress-bar {
+        left: -100%;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-right: 0;
+        -webkit-transform-origin: center right;
+        transform-origin: center right;
+    }
+
+    .progress .progress-value {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .rounded-lg {
+        border-radius: 1rem;
+    }
+
+    .text-gray {
+        color: #aaa;
+    }
+
+    div.h4 {
+        line-height: 1rem;
+    }
+</style>

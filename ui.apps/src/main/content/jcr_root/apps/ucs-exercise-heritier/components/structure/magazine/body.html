@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+    <sly data-sly-call="${clientlib.css @ categories=['ucs-exercise-heritier.base']}" />
+    <sly data-sly-include='/libs/wcm/core/components/init/init.jsp' />
+</head>
+<body>
+<header class="header ucg-icons__newPackage"
+    data-sly-resource="${'/content/ucs-exercise-heritier/us/en/jcr:content/unicredit-header' @ resourceType='ucs-exercise-heritier/components/heading/base'}">
+</header>
+<main class="main-content welcome-page ucg-icons__newPackage">
+   <div>
+    <sly data-sly-resource="${'utils' @ resourceType='ucs-exercise-heritier/components/articleImport'}"></sly>
+   </div>
+</main>
+<footer class="footer ucg-icons__newPackage">
+    <sly data-sly-resource="${'/content/ucs-exercise-heritier/us/en/jcr:content/footer' @ resourceType='ucs-exercise-heritier/components/footer'}" />
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<sly data-sly-call="${clientlib.js @ categories=['ucs-exercise-heritier.site']}" />
+<sly data-sly-call="${clientlib.js @ categories=['ucs-exercise-heritier.base']}" />
+</body>
