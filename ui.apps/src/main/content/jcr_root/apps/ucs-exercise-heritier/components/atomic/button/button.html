@@ -1,0 +1,9 @@
+<button class="atomic-btn">
+    <sly data-sly-test="${properties.text}">
+        ${properties.text @context='html'}
+    </sly>
+
+    <sly data-sly-test="${!properties.text}">
+        Add text
+    </sly>
+</button>

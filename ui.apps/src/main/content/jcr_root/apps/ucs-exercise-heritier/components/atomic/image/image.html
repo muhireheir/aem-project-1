@@ -1,6 +1,8 @@
 <sly data-sly-use.imageModel="it.codeland.heritier.core.models.ImageModel" >
     <picture >
-        <img class="media-item" src="${imageModel.mobileRendition}" alt="">
+        <source media="(min-width:650px)" srcset="${imageModel.desktopRendition}">
+        <source media="(max-width:465px)" srcset="${imageModel.mobileRendition}">
+        <img class="media-item" src="${imageModel.desktopRendition}" alt="">
     </picture>
 </sly>
 

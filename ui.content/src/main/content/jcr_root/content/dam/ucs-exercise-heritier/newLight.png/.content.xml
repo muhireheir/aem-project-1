@@ -8,12 +8,12 @@
         cq:name="newLight.png"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-10T06:51:12.621+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:46.047+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"
-            dam:extracted="{Date}2022-01-10T06:51:12.380+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:45.802+02:00"
             dam:Fileformat="PNG"
             dam:MIMEtype="image/png"
             dam:Numberofimages="{Long}1"

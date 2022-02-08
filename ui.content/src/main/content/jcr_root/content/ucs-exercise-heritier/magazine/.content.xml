@@ -16,7 +16,7 @@
         sling:resourceType="ucs-exercise-heritier/components/structure/magazine"
         date="this is a date"
         description="this is a date"
-        lastJobExecTime="{Long}1643299380395"
+        lastJobExecTime="{Long}1643529600101"
         picture="this is a date">
         <utils
             jcr:lastModified="{Date}2022-01-18T17:28:56.058+02:00"

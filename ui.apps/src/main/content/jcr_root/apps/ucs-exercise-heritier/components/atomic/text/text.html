@@ -1,2 +1,4 @@
-<sly data-sly-test="${properties.text}">${properties.text @context='html'}</sly>
+<sly data-sly-test="${properties.text}">
+   <div class="${properties.tp} ${properties.bp}">${properties.text @context='html'}</div>
+</sly>
 <sly data-sly-test="${!properties.text}">Add text</sly>

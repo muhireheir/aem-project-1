@@ -8,11 +8,11 @@
         cq:name="articles.csv"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-27T18:02:59.061+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:33.432+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2022-01-27T18:02:58.865+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:32.954+02:00"
             dam:sha1="f5c73a434c65ce7fb476ce5799d326bc07d2b6ea"
             dam:size="{Long}24087"
             dc:format="text/csv"

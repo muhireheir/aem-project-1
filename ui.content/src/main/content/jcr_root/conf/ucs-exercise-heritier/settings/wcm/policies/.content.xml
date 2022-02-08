@@ -359,6 +359,26 @@
                 <gallery jcr:primaryType="nt:unstructured"/>
             </structure>
             <footer jcr:primaryType="nt:unstructured"/>
+            <content jcr:primaryType="nt:unstructured">
+                <gallerycard jcr:primaryType="nt:unstructured">
+                    <policy_1643476997149
+                        jcr:lastModified="{Date}2022-01-31T15:42:42.908+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="gallery card renditions"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        desktopRendition="200x300"
+                        mobileRendition="340x360"
+                        tabletRendition="340x360">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2022-01-30T11:10:09.486+02:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1643476997149>
+                </gallerycard>
+            </content>
         </components>
     </ucs-exercise-heritier>
     <wcm jcr:primaryType="nt:unstructured">

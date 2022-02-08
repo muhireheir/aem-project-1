@@ -8,13 +8,13 @@
         cq:name="testimage.png"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-18T18:08:41.238+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:49.996+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"
             dam:Comments="Software: gnome-screenshot&#xa;"
-            dam:extracted="{Date}2022-01-18T18:08:40.803+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:49.436+02:00"
             dam:Fileformat="PNG"
             dam:MIMEtype="image/png"
             dam:Numberofimages="{Long}1"

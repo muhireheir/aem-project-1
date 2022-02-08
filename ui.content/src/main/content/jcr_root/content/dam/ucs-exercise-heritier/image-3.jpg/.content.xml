@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="757c3e3f-f69a-4341-a667-c579a96cc02b">
+    <jcr:content
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2022-01-31T15:54:25.345+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2022-01-31T15:54:23.709+02:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}300"
+            dam:Physicalheightininches="{Decimal}4.0"
+            dam:Physicalwidthindpi="{Long}300"
+            dam:Physicalwidthininches="{Decimal}6.400000095367432"
+            dam:Progressive="no"
+            dam:sha1="5f12f595467c3a4fd3d69153690f1ce7f09a609e"
+            dam:size="{Long}2120338"
+            dc:creator="[www.freepix4all.com]"
+            dc:creator_xmpArrayType="rdf:Seq"
+            dc:description="www.freepix4all.com"
+            dc:format="image/jpeg"
+            dc:rights="www.freepix4all.com"
+            dc:subject="www.freepix4all.com"
+            dc:title="www.freepix4all.com"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}1200"
+            tiff:ImageWidth="{Long}1920"
+            xmpMM:InstanceID="uuid:faf5bdd5-ba3d-11da-ad31-d33d75182f1b"
+            LastKeywordXMP="[www.freepix4all.com]"
+            LastKeywordXMP_xmpArrayType="rdf:Bag"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

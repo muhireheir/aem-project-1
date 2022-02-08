@@ -8,14 +8,14 @@
         cq:name="asset.jpg"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-10T06:51:11.543+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:23.729+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:ColorSpace="{Long}-1"
             dam:ExifOffset="{Long}232"
-            dam:extracted="{Date}2022-01-10T06:51:06.421+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:21.553+02:00"
             dam:Fileformat="JPEG"
             dam:JpgFromRawLength="{Long}988"
             dam:JpgFromRawStart="{Long}382"

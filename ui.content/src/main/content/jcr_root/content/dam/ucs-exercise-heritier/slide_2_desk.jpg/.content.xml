@@ -5,20 +5,20 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="8084fee2-6f53-48e4-910f-77bb272b6dae">
     <jcr:content
-        cq:lastReplicated="{Date}2022-01-29T16:17:25.045+02:00"
+        cq:lastReplicated="{Date}2022-01-29T17:43:36.058+02:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         cq:name="slide_2_desk.jpg"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-10T06:51:10.237+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:34.675+02:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:Comments="Compressed by jpeg-recompress&#xa;"
-            dam:extracted="{Date}2022-01-10T06:51:09.560+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:33.664+02:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"

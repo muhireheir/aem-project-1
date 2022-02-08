@@ -80,7 +80,7 @@ public class ImageModel {
         Resource rendableResource = null;
         if (currentResourceName.equals("image-1")) {
             rendableResource = currentResource.getParent();
-        }else{
+        } else {
             rendableResource = currentResource;
         }
         ContentPolicyManager policyManager = resourceResolver.adaptTo(ContentPolicyManager.class);
@@ -91,13 +91,28 @@ public class ImageModel {
         this.mobileRendition = contentPolicyProps.get("mobileRendition", String.class);
         // current resource name
 
-       
-
-
         if (currentResourceName.equals("image-1")) {
-            getImagesRenditions(currentResource);
-        }else if (currentResource.getChild("image-1") != null) {
-            getImagesRenditions(resource.getChild("image-1"));
+            generateRenditions(currentResource);
+        } else if (currentResource.getChild("image-1") != null) {
+            generateRenditions(resource.getChild("image-1"));
+        }
+    }
+
+    public void generateRenditions(Resource resource) {
+        Resource imageNode = resource;
+        if (imageNode.getValueMap().get("desktopImagePath") != null) {
+            desktopImage = imageNode.getValueMap().get("desktopImagePath", String.class);
+        }
+        if (imageNode.getValueMap().get("mobileImagePath") != null) {
+            mobileImage = imageNode.getValueMap().get("mobileImagePath", String.class);
+        } else {
+            mobileImage = imageNode.getValueMap().get("desktopImagePath", String.class);
+        }
+
+        if (desktopImage != null && mobileImage != null) {
+            mobileImagePath = mobileImage + ".transform/" + this.mobileRendition + "/image.png";
+            desktopImagePath = desktopImage + ".transform/" + this.desktopRendition + "/image.png";
+            tabletImagePath = desktopImage + ".transform/" + this.tabletRendition + "/image.png";
         }
     }
 
@@ -111,29 +126,5 @@ public class ImageModel {
 
     public String getTableRendition() {
         return tabletImagePath;
-    }
-
-    public void getImagesRenditions(Resource resource) {
-        Resource imageNode = resource;
-            if (imageNode.getValueMap().get("desktopImagePath") != null) {
-                desktopImage = imageNode.getValueMap().get("desktopImagePath", String.class);
-            }
-            if (imageNode.getValueMap().get("mobileImagePath") != null) {
-                mobileImage = imageNode.getValueMap().get("mobileImagePath", String.class);
-            } else {
-                mobileImage = imageNode.getValueMap().get("desktopImagePath", String.class);
-            }
-
-            if (desktopImage != null && mobileImage != null) {
-                String dampath = "content/dam/ucs-exercise-heritier/";
-                String mobileImageName = mobileImage.split(dampath)[1];
-                String desktopImageName = desktopImage.split(dampath)[1];
-                mobileImagePath = "/content/dam/ucs-exercise-heritier/" + mobileImageName + ".transform/"
-                        + this.mobileRendition + "/image.png";
-                desktopImagePath = "/content/dam/ucs-exercise-heritier/" + desktopImageName + ".transform/"
-                        + this.desktopRendition + "/image.png";
-                tabletImagePath = "/content/dam/ucs-exercise-heritier/" + desktopImageName + ".transform/"
-                        + this.tabletRendition + "/image.png";
-            }
     }
 }

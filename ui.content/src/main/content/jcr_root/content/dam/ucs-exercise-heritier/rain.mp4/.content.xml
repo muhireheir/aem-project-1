@@ -4,16 +4,16 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="3cdbb522-ff1f-4236-bd49-18ea1ac92c7b">
     <jcr:content
-        cq:lastReplicated="{Date}2022-01-29T15:50:56.295+02:00"
+        cq:lastReplicated="{Date}2022-01-29T17:43:36.058+02:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-29T15:51:09.209+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:37:26.090+02:00"
         jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:extracted="{Date}2022-01-29T15:49:38.362+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:24.694+02:00"
             dam:sha1="45a26d5462e3010df5ca2ba413b699aa1ebd0cd0"
             dam:size="{Long}1905484"
             dc:extent="{Long}6004"

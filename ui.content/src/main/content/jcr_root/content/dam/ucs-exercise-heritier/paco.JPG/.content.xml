@@ -4,13 +4,17 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="b82af430-d411-4281-bec0-11110f2d4250">
     <jcr:content
+        cq:lastReplicated="{Date}2022-01-29T19:54:51.868+02:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-28T10:54:16.145+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:53.904+02:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2022-01-28T10:54:13.603+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:52.171+02:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"

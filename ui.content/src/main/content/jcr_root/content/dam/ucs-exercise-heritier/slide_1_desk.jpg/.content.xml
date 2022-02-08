@@ -8,13 +8,13 @@
         cq:name="slide_1_desk.jpg"
         cq:parentPath="/content/dam/ucs-exercise-heritier"
         dam:assetState="processed"
-        jcr:lastModified="{Date}2022-01-10T06:51:14.622+02:00"
+        jcr:lastModified="{Date}2022-01-29T17:36:50.744+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:Comments="Compressed by jpeg-recompress&#xa;"
-            dam:extracted="{Date}2022-01-10T06:51:14.033+02:00"
+            dam:extracted="{Date}2022-01-29T17:36:50.163+02:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"

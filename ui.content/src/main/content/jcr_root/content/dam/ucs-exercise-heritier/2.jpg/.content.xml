@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="335804be-0b4e-45c2-ab09-ec8dadb58c3f">
+    <jcr:content
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2022-01-31T07:36:32.856+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2022-01-31T07:36:28.230+02:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}300"
+            dam:Physicalheightininches="{Decimal}12.0"
+            dam:Physicalwidthindpi="{Long}300"
+            dam:Physicalwidthininches="{Decimal}19.200000762939453"
+            dam:Progressive="yes"
+            dam:sha1="0d814b2ab6e79e9c03992c35256a9fd1c1d4e5ef"
+            dam:size="{Long}4543575"
+            dc:description="imgprix.com"
+            dc:format="image/jpeg"
+            dc:subject="imgprix.com"
+            dc:title="imgprix.com"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}3600"
+            tiff:ImageWidth="{Long}5760"
+            xmpMM:InstanceID="uuid:faf5bdd5-ba3d-11da-ad31-d33d75182f1b"
+            LastKeywordXMP="[imgprix.com]"
+            LastKeywordXMP_xmpArrayType="rdf:Bag"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}1"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}1"
+                lastUsed="{Date}2022-01-31T14:30:47.110+02:00"/>
+        </usages>
+    </jcr:content>
+</jcr:root>

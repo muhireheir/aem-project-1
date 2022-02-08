@@ -11,6 +11,46 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
+                    <topPadding
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/select"
+                    fieldLabel="top padding"
+                    name="./tp">
+                        <items jcr:primaryType="nt:unstructured">
+                            <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="default"
+                            value="p-0"/>
+                            <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="20px"
+                            value="p-20"/>
+                            <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="30px"
+                            value="p-30"/>
+                        </items>
+                    </topPadding>
+                    <bottomPadding
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/select"
+                    fieldLabel="bottom padding"
+                    name="./bp">
+                        <items jcr:primaryType="nt:unstructured">
+                            <option0
+                            jcr:primaryType="nt:unstructured"
+                            text="default"
+                            value="pb-0"/>
+                            <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="20px"
+                            value="pb-20"/>
+                            <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="30px"
+                            value="pb-30"/>
+                        </items>
+                    </bottomPadding>
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/gui/components/authoring/dialog/richtext"
